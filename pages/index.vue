@@ -3,10 +3,10 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        my-project
+        Luxaxess
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        THINKTECH project
       </h2>
       <div class="links">
         <a
