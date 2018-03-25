@@ -9,16 +9,18 @@
         THINKTECH project
       </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
+        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
       </div>
     </div>
+    <h2>Blog</h2>
+    <ul>
+      <li v-for="post in posts" :key="post.date">
+        <nuxt-link :to="post._path">
+          {{ post.title }}
+        </nuxt-link>
+      </li>
+    </ul>
   </section>
 </template>
 
@@ -28,6 +30,17 @@ import AppLogo from '~/components/AppLogo.vue'
 export default {
   components: {
     AppLogo
+  },
+  data() {
+    // Using webpacks context to gather all files from a folder
+    const context = require.context('~/content/blog/posts/', false, /\.json$/)
+
+    const posts = context.keys().map(key => ({
+      ...context(key),
+      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
+    }))
+
+    return { posts }
   }
 }
 </script>
@@ -42,7 +55,8 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
   font-size: 100px;
