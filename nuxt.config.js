@@ -26,6 +26,13 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
+  ** Assets
+  */
+  //'@/assets/css/bootstrap-reboot.min.css',
+  //'@/assets/css/bootstrap-grid.min.css',
+  //  '@/assets/css/bootstrap.min.css',
+  css: ['@/assets/css/bootstrap.css', '@/assets/css/style.css'],
+  /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
