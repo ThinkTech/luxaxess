@@ -31,7 +31,7 @@ module.exports = {
   //'@/assets/css/bootstrap-reboot.min.css',
   //'@/assets/css/bootstrap-grid.min.css',
   //  '@/assets/css/bootstrap.min.css',
-  css: ['@/assets/css/bootstrap.css', '@/assets/css/style.css'],
+  css: ['@/assets/css/reset.css', '@/assets/css/font-awesome.css'],
   /*
   ** Customize the progress bar color
   */
@@ -43,9 +43,17 @@ module.exports = {
     routes: dynamicRoutes
   },
   /*
+  ** Plugins section
+  */
+  plugins: [
+    { src: '~/plugins/vue-mq', ssr: false },
+    { src: '~/plugins/vue-custom-properties', ssr: false }
+  ],
+  /*
   ** Build configuration
   */
   build: {
+    vendor: ['vue-mq', 'vue-custom-properties'],
     /*
     ** Run ESLint on save
     */

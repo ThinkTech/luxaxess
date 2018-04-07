@@ -1,371 +1,150 @@
 <template>
-  <div>
-    <div class="main-agile">
-      <div class="banner-w3l">
-        <!-- header -->
-        <div class="header">
-          <div class="logo">
-            <h1>
-              <a href="index.html">
-                <span>LUX</span>AXESS
-                <label>All Business Center</label>
-              </a>
-            </h1>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <!-- //header -->
-        <!-- top-nav -->
-        <nav class="cd-stretchy-nav edit-content">
-          <a class="cd-nav-trigger" href="#0"> Menu
-            <span aria-hidden="true"></span>
-          </a>
-          <ul>
-            <li>
-              <a href="#home" class="scroll active">
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="about.html">
-                <span>About</span>
-              </a>
-            </li>
-            <li>
-              <a href="gallery.html">
-                <span>Gallery</span>
-              </a>
-            </li>
-            <li>
-              <a href="typo.html">
-                <span>Typography</span>
-              </a>
-            </li>
-            <li>
-              <a href="icons.html">
-                <span>Icons</span>
-              </a>
-            </li>
-            <li>
-              <a href="contact.html">
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
-          <span aria-hidden="true" class="stretchy-nav-bg"></span>
-        </nav>
-        <!-- //top-nav -->
-        <div class="container">
-          <div class="agile_banner_info">
-            <div class="agile_banner_info1">
-              <h3>Welcome To
-                <span>Business</span>
-              </h3>
-              <div id="typed-strings" class="agileits_w3layouts_strings">
-                <p>start your
-                  <i>business</i> to complete your dream</p>
-                <p>Our
-                  <i>business</i> is Your business</p>
-                <p>Best Of
-                  <i>business</i> Planning advisors & specialist</p>
-              </div>
-              <span id="typed" style="white-space:pre;"></span>
-            </div>
-            <div class="banner_agile_para">
-              <p>Excepteur sint occaecat cupidatat non proident.</p>
-            </div>
-            <div class="wrapper-inner-tab-backgrounds">
-              <div class="wrapper-inner-tab-backgrounds-first">
-                <a href="single.html">
-                  <div class="sim-button button17">Decouvrir</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+  <main class="container">
+    <carousel :per-page=1 autoplay loop easing="cubic-bezier(0.55, 0.055, 0.675, 0.19)" :speed=600>
+      <slide>
+       <img src="../assets/images/house.jpg" alt="">
+          <h1 class="headline">All business center</h1>
+          <h2 class="subhead">MOBILIER</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+
+       
+      </slide>
+      <slide>
+       
+    <img src="../assets/images/interior.jpg" alt="">
+    
+    <h1>All business center</h1>
+    <h2 class="subhead">DECORATION</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+
+              
+         
+      </slide>
+    </carousel>
+     <grid :col="$mq | mq({phone: 1, laptop: 2})" class="products full">
+      <box>
+        <grid :col="$mq | mq({phone: 1, laptop: 2})">
+          <box>
+            <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+          </box>
+          <box class="product">
+            <h1>Adipiscing elit sed do eiusmod tempor</h1>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>          
+            <a>Decouvrir</a>
+          </box>
+        </grid>
+      </box>
+      <box>
+        <img src="../assets/images/b1.jpg" alt="" class="products-image-box tall" />
+      </box>
+    </grid>
+    <section class="cards full">
+      <grid :col="$mq | mq({phone: 1, tablet: 2, pad:4})" gap="1.625em">
+        <box class="card">
+          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
+            <box>
+              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+            </box>
+            <box class="product">             
+              <h2>Adipiscing elit sed do eiusmod tempor</h2>
+              <a>Decouvrir</a>
+            </box>
+          </grid>
+        </box>
+        <box class="card">
+          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
+            <box>
+              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+            </box>
+            <box class="product">             
+              <h2>Adipiscing elit sed do eiusmod tempor</h2>
+              <a>Decouvrir</a>
+            </box>
+          </grid>
+        </box>
+        <box class="card">
+          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
+            <box>
+              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+            </box>
+            <box class="product">             
+              <h2>Adipiscing elit sed do eiusmod tempor</h2>
+              <a>Decouvrir</a>
+            </box>
+          </grid>
+        </box>
+        <box class="card">
+          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
+            <box>
+              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+            </box>
+            <box class="product">             
+              <h2>Adipiscing elit sed do eiusmod tempor</h2>
+              <a>Decouvrir</a>
+            </box>
+          </grid>
+        </box>
+      </grid>
+    </section>
+    <section class="grid1">
+  
+      <div class="img1"></div>
+      
+      <div class="img2"></div>
+      
+      <div class="strapline">
+        <blockquote>“Almost immediately, word spread of a Welshman who had built this incredible sounding sub bass system, and soon enough audiophiles began searching out these legendary subs that were built like no other.”</blockquote>
       </div>
-    </div>
-    <!-- //banner -->
-    <!-- welcome -->
-    <div class="about w3layouts-agileinfo" id="about">
-      <div class="container">
-        <h3 class="title-w3l">
-          <span>W</span>elcome</h3>
-        <div class="about-top w3ls-agile">
-          <div class="col-md-6 red">
-            <img class="img-responsive" src="../assets/images/2.jpg" alt="">
-            <div class="about-img">
-              <div class="col-md-6 col-xs-6 about-img1">
-                <img class="img-responsive" src="../assets/images/3.jpg" alt="">
-              </div>
-              <div class="col-md-6 col-xs-6 about-img2">
-                <img class="img-responsive" src="../assets/images/4.jpg" alt="">
-              </div>
-              <div class="clearfix"> </div>
-            </div>
-          </div>
-          <div class="col-md-6 come">
-            <div class=" about-wel">
-              <h5>We provide service since
-                <span>2006</span> with proud!</h5>
-              <p>Masagni dolores eoquie int Basmodi temporant, autem vel eum iure reprehend.Unicmquam eius, Basmodi temurer sehsMunim.</p>
-              <p>Basmodi temporant, ut laboreas dolore magnam kuyte hend.Unicmquam eius, Basmodi temurer sehsMunim.</p>
-              <ul>
-                <li>
-                  <i class="fa fa-hand-o-right" aria-hidden="true"></i>Masagni dolores eoquie oluptd olorem</li>
-                <li>
-                  <i class="fa fa-hand-o-right" aria-hidden="true"></i>Ipsumquia dolor sitamnetase eiuse</li>
-                <li>
-                  <i class="fa fa-hand-o-right" aria-hidden="true"></i>Ipsumquia dolor sitamne adipiscquam</li>
-              </ul>
-            </div>
-          </div>
-          <div class="clearfix"> </div>
+      
+      <div class="img3"></div>
+      
+      <div class="cta-wrapper">
+        
+        <div class="cta">
+          <h1>Luxaxess</h1>
+          <p>Introducing 212/SE, our most powerful and agile subwoofer, designed exclusively for larger systems and rooms to allow superior state of the art speakers to spring to full voice.</p>
+          <a class="button" href="">View Product Details →</a>
         </div>
+        
       </div>
-    </div>
-    <!-- //welcome -->
-    <!-- middle -->
-    <div class="testi-mk" id="team">
-      <div class="testimonials w3ls-section">
-        <div class="container">
-          <!--Slider-->
-          <div class="callbacks_container">
-            <ul class="rslides" id="slider3">
-              <li>
-                <div class="prod-w3l w3l-m1">
-                  <img src="../assets/images/k2.png" alt=" " />
-                  <h4>Let’s made Your own
-                    <span>Business</span>
-                  </h4>
-                </div>
-              </li>
-              <li>
-                <div class="prod-w3l">
-                  <img src="../assets/images/p2.png" alt=" " />
-                  <h4>Let’s made Your own
-                    <span>Dream</span>
-                  </h4>
-                </div>
-              </li>
-              <li>
-                <div class="prod-w3l w3l-m1">
-                  <img src="../assets/images/k3.png" alt=" " />
-                  <h4>Let’s made Your own
-                    <span>Branding</span>
-                  </h4>
-                </div>
-              </li>
-              <li>
-                <div class="prod-w3l w3l-m1">
-                  <img src="../assets/images/p4.png" alt=" " />
-                  <h4>Let’s made Your own
-                    <span>Future</span>
-                  </h4>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- //Slider -->
-        </div>
-      </div>
-    </div>
-    <!-- //middle -->
-    <!-- screen -->
-    <div class="wthree_about_grid_right">
-      <img src="../assets/images/k1.png" alt=" ">
-    </div>
-    <!-- //screen -->
-    <!-- services -->
-    <div class="services" id="services">
-      <div class="container">
-        <div class="w3_agileits_services_grids">
-          <div class="col-md-3 w3_agileits_services_grid">
-            <div class="w3_agileits_services_grid_agile">
-              <div class="w3_agileits_services_grid_1">
-                <i class="fa fa-key" aria-hidden="true"></i>
-              </div>
-              <h3>Business Branding</h3>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium</p>
-            </div>
-          </div>
-          <div class="col-md-3 w3_agileits_services_grid">
-            <div class="w3_agileits_services_grid_agile">
-              <div class="w3_agileits_services_grid_1">
-                <i class="fa fa-line-chart" aria-hidden="true"></i>
-              </div>
-              <h3>Analysis project</h3>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium</p>
-            </div>
-          </div>
-          <div class="col-md-3 w3_agileits_services_grid">
-            <div class="w3_agileits_services_grid_agile">
-              <div class="w3_agileits_services_grid_1">
-                <i class="fa fa-money" aria-hidden="true"></i>
-              </div>
-              <h3>Financial Support</h3>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium</p>
-            </div>
-          </div>
-          <div class="col-md-3 w3_agileits_services_grid">
-            <div class="w3_agileits_services_grid_agile">
-              <div class="w3_agileits_services_grid_1">
-                <i class="fa fa-bullhorn" aria-hidden="true"></i>
-              </div>
-              <h3>LifeTime Membership</h3>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium</p>
-            </div>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-      </div>
-    </div>
-    <!-- //services -->
-    <!-- news -->
-    <div class="news" id="news">
-      <div class="container">
-        <h3 class="title-w3l">
-          <span>o</span>ur
-          <span>B</span>log</h3>
-        <div class="news-grids">
-          <div class="col-md-6 news-wthreegrid">
-            <div class="news-grid-left">
-              <div class="date-info">
-                <h6>June 7th 2017</h6>
-                <a href="single.html">Adipiscing elit sed do eiusmod tempor</a>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>
-                <div class="news-button">
-                  <a href="single.html">Decouvrir</a>
-                </div>
-              </div>
-              <div class="clearfix"> </div>
-            </div>
-            <div class="news-grid-left">
-              <div class="date-info">
-                <h6>June 12th 2017</h6>
-                <a href="single.html">Minima veniam, quis nostrum ullam</a>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>
-                <div class="news-button">
-                  <a href="single.html">Decouvrir</a>
-                </div>
-              </div>
-              <div class="clearfix"> </div>
-            </div>
-          </div>
-          <div class="col-md-6 news-wthreegrid">
-            <div class="news-agileimg">
-              <img src="../assets/images/b1.jpg" alt="" />
-            </div>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-      </div>
-    </div>
-    <!-- //news -->
-    <!-- newsletter -->
-    <div class="footer-top">
-      <div class="container">
-        <h3 class="title-w3l-2">
-          <span>N</span>ewsLetter</h3>
-        <p>New Blog Posts delivered fresh to your inbox.</p>
-        <form action="#" method="post">
-          <input type="email" placeholder="E-mail" name="email" required="">
-          <input type="submit" value="Subscribe">
-        </form>
-      </div>
-    </div>
-    <!-- //newsletter -->
-    <!-- footer -->
-    <footer>
-      <div class="agileits-w3layouts-footer-top">
-        <div class="container">
-          <div class="col-md-6 agileits-w3layouts-footer-top-left">
-            <p>
-              <i class="fa fa-phone" aria-hidden="true"></i> +1 234 567 8901</p>
-          </div>
-          <div class="col-md-6 agileits-w3layouts-footer-top-left">
-            <p>
-              <i class="fa fa-envelope" aria-hidden="true"></i> Email :
-              <a href="mailto:example@email.com"> mail@example.com</a>
-            </p>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-      </div>
-      <div class="agileits-footer-bottom">
-        <div class="container">
-          <div class="agileits-footer-bottom-grids">
-            <div class="col-md-6 footer-bottom-left">
-              <h2>About Us</h2>
-              <div class="footer-img-grids">
-                <div class="footer-img">
-                  <img src="../assets/images/f1.jpg" alt="" />
-                </div>
-                <div class="footer-img-info">
-                  <p>Suspendisse potenti. Pellentesque pulvinar tellus at est ullamcorper, at elementum nibh laoreet. Nunc id diam in nulla sollicitudin auctor. Donec elementum felis turpis, vel interdum libero congue non. Mauris non magna convallis</p>
-                </div>
-                <div class="clearfix"> </div>
-              </div>
-            </div>
-            <div class="col-md-3 footer-bottom-right">
-              <h5>We are social</h5>
-              <div class="agileinfo-social-grids">
-                <ul>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-rss"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-vk"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-3 w3l-footer one tweet footer-bottom-right">
-              <h5>Tweets</h5>
-              <ul>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-twitter"></i>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accus.
-                    <i>http//example.com</i>
-                  </a>
-                  <span>About 15 minutes ago
-                    <span>
-                    </span>
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div class="clearfix"> </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <div class="container">
-          <p>© 2017 Business Field. All rights reserved | Design by
-            <a href="http://w3layouts.com">W3layouts</a>
-          </p>
-        </div>
-      </div>
-    </footer>
-  </div>
+      
+    </section>
+
+    <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full">
+      <box>
+        <img src="../assets/images/house.jpg" alt="" />
+      </box>
+      <box class="promo-box">
+        <h1 class="headline">Decoration</h1>
+        <h2 class="subhead">MOBILIER</h2>
+        <h2 class="subhead">INTERIEUR</h2>
+         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>        
+      </box>
+    </grid>
+    <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full">
+      <box>
+        <img src="../assets/images/interior.jpg" alt="" />
+        <h1 class="subhead">RENOVATION</h1>        
+      </box>
+      <box>
+        <img src="../assets/images/interior.jpg" alt="" />
+        <h1 class="subhead">RENOVATION</h1>        
+      </box>
+      <box>
+        <img src="../assets/images/interior.jpg" alt="" />
+        <h1 class="subhead">RENOVATION</h1>        
+      </box>   
+    </grid>
+  </main>
 </template>
 
 <script>
+import { Grid, Box } from '../components/GridBox'
+import Carousel from 'vue-carousel/src/Carousel.vue'
+import Slide from 'vue-carousel/src/Slide.vue'
+import Header from '../components/Header.vue'
 export default {
+  layout: 'index',
   data() {
     // Using webpacks context to gather all files from a folder
     const context = require.context('~/content/blog/posts/', false, /\.json$/)
@@ -375,12 +154,286 @@ export default {
       _path: `/blog/${key.replace('.json', '').replace('./', '')}`
     }))
 
-    return { posts }
+    return {
+      posts
+    }
+  },
+  components: {
+    Grid,
+    Box,
+    Carousel,
+    Slide
   }
 }
 </script>
 
 <style>
-.container {
+main {
+  min-height: 100vh;
+  background: #111;
+  color: white;
+}
+.services {
+  color: white;
+  text-align: center;
+}
+.services > div {
+  border: 1px solid;
+}
+
+.products {
+  background: black;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3.25em)); */
+  padding: 3.25em 0;
+}
+.products-image-box {
+  object-fit: cover;
+  width: 100%;
+  height: 16.25em;
+}
+.tall {
+  height: 24.375em;
+}
+.product {
+  margin-bottom: 3.25em;
+  padding: 0.8125em;
+  display: flex;
+  text-align: center;
+}
+.product a {
+  border: 1px solid;
+  display: inline-block;
+  padding: 0.40625em 1.625em;
+  margin-top: 3.25em;
+  font-weight: 900;
+}
+.product a:hover {
+  color: #d1619c;
+  background: white;
+}
+.cards {
+  background: black;
+  padding: 0.8125em;
+  padding-bottom: 3.25em;
+}
+.card {
+  background: #111;
+  padding: 0.8125em;
+}
+.VueCarousel {
+  grid-column: full;
+  background-image: linear-gradient(#000, rgba(0, 0, 0, 0.8125) 80%, #000);
+}
+.VueCarousel-pagination {
+  background: #111;
+  margin-top: -20px;
+}
+.VueCarousel-slide {
+  height: 86vh;
+  display: grid;
+  grid-template-columns: 1fr 5vw 5vw 1fr 3vw;
+  grid-auto-rows: minmax(10vh, 1fr);
+}
+
+.headline {
+  grid-row: 2;
+  grid-column: 4 / 6;
+  text-align: left;
+  align-self: end;
+  text-shadow: 1px 1px 1px #000;
+  color: #d2a661;
+  font-size: calc(0.6125em + 4vw);
+  line-height: 1.1em;
+  font-family: 'Bungee', serif;
+}
+.subhead {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  text-align: right;
+  align-self: end;
+  font-weight: 400;
+  font-size: calc(0.5rem + 1.5vw);
+  line-height: 1.2em;
+  text-shadow: 1px 1px 0px #000;
+  color: #0b84b9;
+  padding: 0 1vw;
+  font-family: 'Bungee', serif;
+}
+
+.VueCarousel-slide img {
+  grid-row: 1 / 3;
+  grid-column: 1 / 4;
+  z-index: 1;
+  mix-blend-mode: hard-light;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
+}
+.promo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promo-box {
+  padding: 3.25em 0.8125em;
+}
+.VueCarousel-slide h1 {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  text-shadow: 1px 1px 1px #000;
+  color: #d2a661;
+  font-size: calc(0.6125em + 4vw);
+  line-height: 1.1em;
+  font-family: 'Bungee', serif;
+  text-align: right;
+  margin: 0;
+  align-self: end;
+  mix-blend-mode: hard-light;
+}
+.VueCarousel-slide p {
+  grid-column: 4 / 5;
+}
+blockquote {
+  font: 1.1em/2 'Aleo', serif;
+  font-style: italic;
+  margin: 0 0 2em 0;
+}
+
+.img1 {
+  /* could use `object-fit: cover;` on an img, but tricky*/
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/wooden.jpg);
+  background-size: cover;
+}
+
+.img2 {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/speaker.jpg);
+  background-size: cover;
+}
+
+.img3 {
+  /* https://elements.envato.com/gradient-network-wave-backgrounds-L5PGKP */
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/waves.jpg);
+  background-size: cover;
+}
+
+.strapline::before {
+  content: '';
+  display: block;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/wavy.svg)
+    repeat-x;
+  background-size: cover;
+  width: 20%;
+  height: 0.5em;
+  position: absolute;
+  top: -3em;
+  left: 40%;
+}
+
+.cta h1 {
+  font: bold 4em/1 'Aleo', serif;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  background: #222;
+  padding: 0.8em 1.5em;
+  width: 100%;
+  text-align: center;
+}
+
+.button:hover {
+  background: black;
+}
+
+/* grid */
+
+.grid1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding: 20px;
+  mix-blend-mode: hard-light;
+}
+
+.img2 {
+  height: 400px;
+}
+
+.strapline {
+  margin-top: 100px;
+  position: relative;
+}
+
+@media only screen and (min-width: 750px) {
+  .grid1 {
+    grid-template-columns: 3fr 6fr 1fr 5fr 10fr 2fr;
+    grid-template-rows: 100px auto 15px auto auto;
+    padding: 0;
+  }
+
+  .img1 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 5;
+  }
+
+  .img2 {
+    grid-column: 2 / 4;
+    grid-row: 3 / 6;
+  }
+
+  .img3 {
+    grid-column: 5 / 7;
+    grid-row: 4 / 6;
+  }
+
+  .strapline {
+    grid-column: 3 / 6;
+    grid-row: 2 / 3;
+
+    padding: 0 16%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .cta-wrapper {
+    grid-column: 4 / 6;
+    grid-row: 4 / 6;
+  }
+
+  .cta {
+    padding: 100px 0 100px 10%;
+  }
+
+  .cta h1 {
+    font-size: 6em;
+  }
+
+  .button {
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .cta {
+    padding: 100px 0 100px 20%;
+  }
+
+  .cta h1::before {
+    content: '';
+    display: block;
+    height: 1em;
+    width: 1em;
+    /* https://elements.envato.com/retro-badges-7B35YA */
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/badge.svg)
+      no-repeat center center;
+    background-size: 80%;
+    position: absolute;
+    left: -120px;
+    top: 0;
+  }
 }
 </style>

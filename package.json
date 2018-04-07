@@ -14,7 +14,14 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.4.0"
+    "nuxt": "^1.4.0",
+    "typeface-aleo": "0.0.44",
+    "typeface-bungee": "0.0.54",
+    "typeface-clear-sans": "0.0.44",
+    "vue-carousel": "^0.6.9",
+    "vue-custom-properties": "^0.1.0",
+    "vue-easy-slider": "^3.2.0",
+    "vue-mq": "^0.1.3"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
