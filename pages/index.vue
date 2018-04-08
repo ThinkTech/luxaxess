@@ -247,8 +247,7 @@ main {
   color: #d2a661;
   font-size: calc(0.6125em + 4vw);
   line-height: 1.1em;
-  font-family: 'Bungee' Impact, Haettenschweiler, 'Arial Narrow Bold',
-    sans-serif;
+  font-family: 'Bungee', sans-serif;
 }
 .subhead {
   grid-column: 3 / 4;
