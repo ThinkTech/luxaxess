@@ -1,26 +1,25 @@
 <template>
   <main class="container">
-    <carousel :per-page=1 autoplay loop easing="cubic-bezier(0.55, 0.055, 0.675, 0.19)" :speed=600>
-      <slide>
+    <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
+      <div class="slide">
        <img src="../assets/images/house.jpg" alt="">
-          <h1 class="headline">All business center</h1>
-          <h2 class="subhead">MOBILIER</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-
-       
-      </slide>
-      <slide>
-       
-    <img src="../assets/images/interior.jpg" alt="">
-    
-    <h1>All business center</h1>
-    <h2 class="subhead">DECORATION</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-
-              
-         
-      </slide>
-    </carousel>
+        <h1 class="headline">ALL BUSINESS CENTER</h1>
+        <h2 class="subhead">MOBILIER</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+      </div>
+      <div class="slide">
+        <img src="../assets/images/interior.jpg" alt="">
+        <h1>LUXAXESS</h1>
+        <h2 class="subhead">DECORATION</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
+      </div>
+      <div class="slide">
+        <img src="../assets/images/b1.jpg" alt="">
+        <h1>ENTREZ DANS LE MONDE DU BUSINESS</h1>
+        <h2 class="subhead">RENOVATION</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
+      </div>
+    </agile>
      <grid :col="$mq | mq({phone: 1, laptop: 2})" class="products full">
       <box>
         <grid :col="$mq | mq({phone: 1, laptop: 2})">
@@ -93,7 +92,7 @@
       <div class="img2"></div>
       
       <div class="strapline">
-        <blockquote>“Almost immediately, word spread of a Welshman who had built this incredible sounding sub bass system, and soon enough audiophiles began searching out these legendary subs that were built like no other.”</blockquote>
+        <blockquote>“Quand on ne peut pas changer le monde, il faut changer le décor.”</blockquote>
       </div>
       
       <div class="img3"></div>
@@ -102,8 +101,8 @@
         
         <div class="cta">
           <h1>Luxaxess</h1>
-          <p>Introducing 212/SE, our most powerful and agile subwoofer, designed exclusively for larger systems and rooms to allow superior state of the art speakers to spring to full voice.</p>
-          <a class="button" href="">View Product Details →</a>
+          <p>Vous avez craqué sur notre collection Accessoire Salle de Bain ? Voilà exactement la deco design qu’il vous faut pour moderniser votre foyer.</p>
+          <a class="button" href="">Passez votre commande →</a>
         </div>
         
       </div>
@@ -140,8 +139,6 @@
 
 <script>
 import { Grid, Box } from '../components/GridBox'
-import Carousel from 'vue-carousel/src/Carousel.vue'
-import Slide from 'vue-carousel/src/Slide.vue'
 import Header from '../components/Header.vue'
 export default {
   layout: 'index',
@@ -160,9 +157,7 @@ export default {
   },
   components: {
     Grid,
-    Box,
-    Carousel,
-    Slide
+    Box
   }
 }
 </script>
@@ -227,15 +222,7 @@ main {
   background: #111;
   padding: 0.8125em;
 }
-.VueCarousel {
-  grid-column: full;
-  background-image: linear-gradient(#000, rgba(0, 0, 0, 0.8125) 80%, #000);
-}
-.VueCarousel-pagination {
-  background: #111;
-  margin-top: -20px;
-}
-.VueCarousel-slide {
+.slide {
   height: 86vh;
   display: grid;
   grid-template-columns: 1fr 5vw 5vw 1fr 3vw;
@@ -267,7 +254,7 @@ main {
   font-family: 'Bungee', serif;
 }
 
-.VueCarousel-slide img {
+.slide img {
   grid-row: 1 / 3;
   grid-column: 1 / 4;
   z-index: 1;
@@ -285,7 +272,7 @@ main {
 .promo-box {
   padding: 3.25em 0.8125em;
 }
-.VueCarousel-slide h1 {
+.slide h1 {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
   text-shadow: 1px 1px 1px #000;
@@ -298,7 +285,7 @@ main {
   align-self: end;
   mix-blend-mode: hard-light;
 }
-.VueCarousel-slide p {
+.slide p {
   grid-column: 4 / 5;
 }
 blockquote {

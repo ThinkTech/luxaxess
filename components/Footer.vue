@@ -2,45 +2,43 @@
   <footer class="container">    
     <grid :col="$mq | mq({ phone: 2, pad: 4 })" gap="3.25em">
       <box>
-        <h2>About Us</h2>
+        <h2>Luxaxess et vous</h2>
         <ul>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
+          <li><a>À propos de Luxaxess</a></li>
+          <li><a>Nos engagements</a></li>
+          <li><a>Consultez notre brochure</a></li>
+          <li><a>Service Après-Vente</a></li>
         </ul>
       </box>
       <box>
-        <h2>About Us</h2>
+        <h2>Nos services</h2>
         <ul>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
+          <li><a>DECORATION</a></li>
+          <li><a>IMMOBILIER</a></li>
+          <li><a>VEHICULES</a></li>
+          <li><a>ACCESSOIRES</a></li>
         </ul>
       </box>
       <box>
-        <h2>About Us</h2>
+        <h2>Nos horaires</h2>
         <ul>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
+          <li>Lundi au vendredi : 08 h 00-17 h 00</li>
+          <li>Samedi            : 09 h 00-15 h 00</li>
+          <li>Dimanche          : Ferme</li>
         </ul>
       </box>
       <box>
-        <h2>About Us</h2>
+        <h2>Contactez-nous</h2>
         <ul>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
-          <li><a>Link</a></li>
+          <li>Sacre coeur en face cite police, Dakar-Senegal</li>
+          <li>contact@luxaxess.com</li>
+          <li>33 800 00 00</li>
         </ul>
       </box>
     </grid>
     <section class="footer-social-section flex-rw">
         <span class="footer-social-overlap footer-social-connect">
-        CONNECT <span class="footer-social-small">with</span> US
+        RESTEZ <span class="footer-social-small">en</span> CONTACT
         </span>
         <span class="footer-social-overlap footer-social-icons-wrapper">
         <a target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
@@ -55,10 +53,10 @@
       <div class="footer-bottom-wrapper">   
       <i class="fa fa-copyright" role="copyright">
       
-      </i> 2015 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span>
+      </i> 2018 Luxaxess <address class="footer-address" role="company address">Sacre coeur, Dakar</address><span class="footer-bottom-rights"> - Tous droits reserves - </span>
           </div>
           <div class="footer-bottom-wrapper">
-          <a href="/terms-of-use.html" class="generic-anchor" rel="nofollow">Terms</a> | <a href="/privacy-policy.html" class="generic-anchor" rel="nofollow">Privacy</a>
+          <a rel="nofollow">Conditions de vente</a> | <a rel="nofollow">Mentions légales</a>
             </div>
     </section>
    
@@ -83,7 +81,7 @@ footer {
   text-align: center;
 }
 h2 {
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 a,
 a:visited {

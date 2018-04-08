@@ -1,0 +1,31 @@
+.agile {
+  grid-column: full;
+  background-image: linear-gradient(#000, rgba(0, 0, 0, 0.8125) 80%, #000);
+}
+
+.agile__dots {
+  bottom: 3.25em;
+  display: block;
+  left: 1.625em;
+  position: absolute;
+  width: 3.25em;
+}
+
+.agile__dot {
+  margin-bottom: 1.625em;
+}
+
+.agile__dot button {
+  background-color: transparent;
+  border: 8px solid #fff;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+.agile__dot button:hover {
+  border: 8px solid #888;
+}
+
+.agile__dot--current button {
+  border: 8px solid #222;
+}

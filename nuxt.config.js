@@ -31,7 +31,11 @@ module.exports = {
   //'@/assets/css/bootstrap-reboot.min.css',
   //'@/assets/css/bootstrap-grid.min.css',
   //  '@/assets/css/bootstrap.min.css',
-  css: ['@/assets/css/reset.css', '@/assets/css/font-awesome.css'],
+  css: [
+    '@/assets/css/reset.css',
+    '@/assets/css/font-awesome.css',
+    '@/assets/css/carousel.css'
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -46,6 +50,7 @@ module.exports = {
   ** Plugins section
   */
   plugins: [
+    { src: '~/plugins/vue-agile', ssr: false },
     { src: '~/plugins/vue-mq', ssr: false },
     { src: '~/plugins/vue-custom-properties', ssr: false }
   ],
@@ -53,7 +58,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue-mq', 'vue-custom-properties'],
+    vendor: ['vue-mq', 'vue-custom-properties', 'vue-agile'],
     /*
     ** Run ESLint on save
     */
