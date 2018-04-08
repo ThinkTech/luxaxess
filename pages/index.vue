@@ -127,12 +127,12 @@
         <h1 class="subhead">RENOVATION</h1>        
       </box>
       <box>
-        <img src="../assets/images/interior.jpg" alt="" />
-        <h1 class="subhead">RENOVATION</h1>        
+        <img src="../assets/images/b1.jpg" alt="" />
+        <h1 class="subhead">DECOR</h1>        
       </box>
       <box>
         <img src="../assets/images/interior.jpg" alt="" />
-        <h1 class="subhead">RENOVATION</h1>        
+        <h1 class="subhead">IMMOBILIER</h1>        
       </box>   
     </grid>
   </main>
@@ -180,7 +180,11 @@ main {
 .services > div {
   border: 1px solid;
 }
-
+.services img {
+  height: 16.25em;
+  width: 100%;
+  object-fit: cover;
+}
 .products {
   background: black;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3.25em)); */
