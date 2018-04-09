@@ -10,13 +10,13 @@
           </div>
           <div class="slide">
             <img src="../assets/images/interior.jpg" alt="">
-            <h1>LUXAXESS</h1>
+            <h1 class="headline">LE MONDE DU BUSINESS</h1>
             <h2 class="subhead">DECORATION</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
           </div>
           <div class="slide">
             <img src="../assets/images/b1.jpg" alt="">
-            <h1>ENTREZ DANS LE MONDE DU BUSINESS</h1>
+            <h1 class="headline">LUXAXESS</h1>
             <h2 class="subhead">RENOVATION</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
           </div>
@@ -225,35 +225,29 @@ main {
   padding: 0.8125em;
 }
 .slide {
-  height: 86vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: 1fr 5vw 5vw 1fr 3vw;
-  grid-auto-rows: minmax(10vh, 1fr);
+  grid-auto-rows: minmax(45vh, 1fr);
 }
 
 .headline {
-  grid-row: 2;
-  grid-column: 4 / 6;
-  text-align: left;
-  align-self: end;
-  text-shadow: 1px 1px 1px #000;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
   color: #d2a661;
   font-size: calc(0.6125em + 4vw);
-  line-height: 1.1em;
-  font-family: 'Bungee', sans-serif;
+  font-family: 'Bungee';
+  text-align: right;
+  align-self: end;
 }
 .subhead {
   grid-column: 3 / 4;
   grid-row: 1 / 3;
   text-align: right;
   align-self: end;
-  font-weight: 400;
-  font-size: calc(0.5rem + 1.5vw);
-  line-height: 1.2em;
-  text-shadow: 1px 1px 0px #000;
   color: #0b84b9;
-  padding: 0 1vw;
-  font-family: 'Bungee', serif;
+  padding: 0 0.40625em;
+  font-family: 'Bungee';
 }
 
 .slide img {
@@ -273,19 +267,6 @@ main {
 }
 .promo-box {
   padding: 3.25em 0.8125em;
-}
-.slide h1 {
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
-  text-shadow: 1px 1px 1px #000;
-  color: #d2a661;
-  font-size: calc(0.6125em + 4vw);
-  line-height: 1.1em;
-  font-family: 'Bungee', serif;
-  text-align: right;
-  margin: 0;
-  align-self: end;
-  mix-blend-mode: hard-light;
 }
 .slide p {
   grid-column: 4 / 5;

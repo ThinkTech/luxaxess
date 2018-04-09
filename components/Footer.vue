@@ -2,7 +2,7 @@
   <footer class="container">    
     <grid :col="$mq | mq({ phone: 2, pad: 4 })" gap="3.25em">
       <box>
-        <h2>Luxaxess et vous</h2>
+        <h2>Luxaxess</h2>
         <ul>
           <li><a>À propos de Luxaxess</a></li>
           <li><a>Nos engagements</a></li>
@@ -20,7 +20,7 @@
         </ul>
       </box>
       <box>
-        <h2>Nos horaires</h2>
+        <h2>Horaires</h2>
         <ul>
           <li>Lundi au vendredi : 08 h 00-17 h 00</li>
           <li>Samedi            : 09 h 00-15 h 00</li>
@@ -28,7 +28,7 @@
         </ul>
       </box>
       <box>
-        <h2>Contactez-nous</h2>
+        <h2>Contact</h2>
         <ul>
           <li>Sacre coeur en face cite police, Dakar-Senegal</li>
           <li>contact@luxaxess.com</li>

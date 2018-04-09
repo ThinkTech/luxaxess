@@ -50,6 +50,7 @@ module.exports = {
   ** Plugins section
   */
   plugins: [
+    { src: '~/plugins/typeface', ssr: false },
     { src: '~/plugins/vue-agile', ssr: false },
     { src: '~/plugins/vue-mq', ssr: false },
     { src: '~/plugins/vue-custom-properties', ssr: false }
@@ -58,7 +59,13 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue-mq', 'vue-custom-properties', 'vue-agile'],
+    vendor: [
+      'vue-mq',
+      'vue-custom-properties',
+      'typeface-aleo',
+      'typeface-bungee',
+      'typeface-clear-sans'
+    ],
     /*
     ** Run ESLint on save
     */

@@ -9,6 +9,7 @@
   left: 1.625em;
   position: absolute;
   width: 3.25em;
+  flex-direction: column;
 }
 
 .agile__dot {

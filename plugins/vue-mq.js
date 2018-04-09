@@ -1,7 +1,3 @@
-import 'typeface-aleo'
-import 'typeface-clear-sans'
-import 'typeface-bungee'
-
 import Vue from 'vue'
 import VueMq from 'vue-mq'
 
