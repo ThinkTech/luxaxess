@@ -85,7 +85,7 @@ h2 {
 }
 a,
 a:visited {
-  color: #98bbe4;
+  color: #61ceff;
 }
 
 a:hover {

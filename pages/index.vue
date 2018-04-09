@@ -245,7 +245,7 @@ main {
   grid-row: 1 / 3;
   text-align: right;
   align-self: end;
-  color: #0b84b9;
+  color: #61ceff;
   padding: 0 0.40625em;
   font-family: 'Bungee';
 }
