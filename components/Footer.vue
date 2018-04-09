@@ -75,7 +75,7 @@ export default {
 
 <style scoped>
 footer {
-  padding-top: 1.625em;
+  padding-top: 3.25em;
   background: black;
   color: white;
   text-align: center;
@@ -103,7 +103,7 @@ a:hover {
   justify-content: space-around;
   position: relative;
   margin-top: 0.8125em;
-  font-size: 225%;
+  font-size: 175%;
 }
 
 .footer-social-section::after {

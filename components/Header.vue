@@ -41,7 +41,7 @@ nav ul li {
 nav ul li a {
   font-weight: 900;
   text-transform: uppercase;
-  color: #61ceff;
+  color: white;
 }
 nav ul li a:hover {
   color: white;
