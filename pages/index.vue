@@ -1,25 +1,27 @@
 <template>
   <main class="container">
-    <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
-      <div class="slide">
-       <img src="../assets/images/house.jpg" alt="">
-        <h1 class="headline">ALL BUSINESS CENTER</h1>
-        <h2 class="subhead">MOBILIER</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-      </div>
-      <div class="slide">
-        <img src="../assets/images/interior.jpg" alt="">
-        <h1>LUXAXESS</h1>
-        <h2 class="subhead">DECORATION</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
-      </div>
-      <div class="slide">
-        <img src="../assets/images/b1.jpg" alt="">
-        <h1>ENTREZ DANS LE MONDE DU BUSINESS</h1>
-        <h2 class="subhead">RENOVATION</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
-      </div>
-    </agile>
+    <no-ssr>
+        <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
+          <div class="slide">
+          <img src="../assets/images/house.jpg" alt="">
+            <h1 class="headline">ALL BUSINESS CENTER</h1>
+            <h2 class="subhead">MOBILIER</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+          </div>
+          <div class="slide">
+            <img src="../assets/images/interior.jpg" alt="">
+            <h1>LUXAXESS</h1>
+            <h2 class="subhead">DECORATION</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
+          </div>
+          <div class="slide">
+            <img src="../assets/images/b1.jpg" alt="">
+            <h1>ENTREZ DANS LE MONDE DU BUSINESS</h1>
+            <h2 class="subhead">RENOVATION</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
+          </div>
+        </agile>
+    </no-ssr>
      <grid :col="$mq | mq({phone: 1, laptop: 2})" class="products full">
       <box>
         <grid :col="$mq | mq({phone: 1, laptop: 2})">
