@@ -6,11 +6,11 @@
       </a>
       <ul>
         <li><a>Accueil</a></li>
-        <li><a>MOBILIER</a></li>
-        <li><a>DECOR</a></li>
-        <li><a>VEHICULES</a></li>
-        <li><a>ACCESSOIRES</a></li>
-        <li><a>CONTACT</a></li>
+        <li><a>Properties</a></li>
+        <li><a>Facilities</a></li>
+        <li><a>Business opportunities</a></li>
+        <li><a>Boutique</a></li>
+        <li><a>Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -35,12 +35,11 @@ nav ul {
 }
 nav ul li {
   padding: 0.8125em 1.625em;
-  background: #d2a661;
-  border-left: 1px solid #d6b888;
+  background: #a91414;
+  border-left: 1px solid #bb1111;
 }
 nav ul li a {
   font-weight: 900;
-  text-transform: uppercase;
   color: white;
 }
 nav ul li a:hover {

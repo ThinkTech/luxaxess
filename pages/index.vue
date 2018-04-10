@@ -4,20 +4,17 @@
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <div class="slide">
           <img src="../assets/images/house.jpg" alt="">
-            <h1 class="headline">ALL BUSINESS CENTER</h1>
-            <h2 class="subhead">MOBILIER</h2>
+            <h1 class="headline">ALL BUSINESS CENTER</h1>            
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
           </div>
           <div class="slide">
             <img src="../assets/images/interior.jpg" alt="">
-            <h1 class="headline">LE MONDE DU BUSINESS</h1>
-            <h2 class="subhead">DECORATION</h2>
+            <h1 class="headline">LE MONDE DU BUSINESS</h1>            
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
           </div>
           <div class="slide">
             <img src="../assets/images/b1.jpg" alt="">
-            <h1 class="headline">LUXAXESS</h1>
-            <h2 class="subhead">RENOVATION</h2>
+            <h1 class="headline">LUXAXESS</h1>            
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
           </div>
         </agile>
@@ -234,7 +231,7 @@ main {
 .headline {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
-  color: #d2a661;
+  color: #a91414;
   font-size: calc(0.6125em + 4vw);
   font-family: 'Bungee';
   text-align: right;
