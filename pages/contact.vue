@@ -6,7 +6,7 @@
         <form id="contact" action="" method="post">
           <h1>CONTACTEZ-NOUS</h1>
           <fieldset>
-            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+            <input placeholder="Your name" type="text" tabindex="1" required>
           </fieldset>
           <fieldset>
             <input placeholder="Your Email Address" type="email" tabindex="2" required>
