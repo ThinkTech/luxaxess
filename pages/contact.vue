@@ -6,19 +6,16 @@
         <form id="contact" action="" method="post">
           <h1>CONTACTEZ-NOUS</h1>
           <fieldset>
-            <input placeholder="Your name" type="text" tabindex="1" required>
+            <input placeholder="Votre nom" type="text" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+            <input placeholder="Votre addresse email" type="email" required>
           </fieldset>
           <fieldset>
-            <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-          </fieldset>
+            <input placeholder="Tel." type="tel">
+          </fieldset>          
           <fieldset>
-            <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
-          </fieldset>
-          <fieldset>
-            <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+            <textarea placeholder="Votre message ici...." required></textarea>
           </fieldset>
           <fieldset>
             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">ENVOYER</button>
