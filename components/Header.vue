@@ -1,16 +1,16 @@
 <template>
   <header class="container">
     <nav>
-      <a>
-        <img src="../assets/images/logo.jpg" alt="luxaxess" />
-      </a>
+      <nuxt-link to="/" class="logo">
+        <h1>Luxaxes</h1>
+      </nuxt-link>
       <ul>
-        <li><a>Accueil</a></li>
+        <li><nuxt-link to="/">Accueil</nuxt-link></li>
         <li><a>Properties</a></li>
         <li><a>Facilities</a></li>
         <li><a>Business opportunities</a></li>
         <li><a>Boutique</a></li>
-        <li><a>Contact</a></li>
+        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
       </ul>
     </nav>
   </header>
@@ -25,9 +25,10 @@ header {
   z-index: 99999;
   box-shadow: 0.1em 0.08125em 1px #1d1b1b;
 }
-img {
+.logo h1 {
   height: 3.25em;
   padding: 0.203125em 0;
+  display: inline-block;
 }
 nav ul {
   display: inline-flex;
@@ -35,8 +36,8 @@ nav ul {
 }
 nav ul li {
   padding: 0.8125em 1.625em;
-  background: #a91414;
-  border-left: 1px solid #bb1111;
+  background: #111;
+  border-left: 1px solid #000;
 }
 nav ul li a {
   font-weight: 900;

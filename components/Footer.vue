@@ -2,9 +2,9 @@
   <footer class="container">    
     <grid :col="$mq | mq({ phone: 2, pad: 4 })" gap="3.25em">
       <box>
-        <h2>Luxaxess</h2>
+        <h2>Luxaxes</h2>
         <ul>
-          <li><a>À propos de Luxaxess</a></li>
+          <li><a>À propos de Luxaxes</a></li>
           <li><a>Nos engagements</a></li>
           <li><a>Consultez notre brochure</a></li>
           <li><a>Service Après-Vente</a></li>
@@ -31,7 +31,7 @@
         <h2>Contact</h2>
         <ul>
           <li>Sacre coeur en face cite police, Dakar-Senegal</li>
-          <li>contact@luxaxess.com</li>
+          <li>info@luxaxes.com</li>
           <li>33 800 00 00</li>
         </ul>
       </box>
@@ -53,7 +53,7 @@
       <div class="footer-bottom-wrapper">   
       <i class="fa fa-copyright" role="copyright">
       
-      </i> 2018 Luxaxess <address class="footer-address" role="company address">Sacre coeur, Dakar</address><span class="footer-bottom-rights"> - Tous droits reserves - </span>
+      </i> 2018 Luxaxes <address class="footer-address" role="company address">Sacre coeur, Dakar</address><span class="footer-bottom-rights"> - Tous droits reserves - </span>
           </div>
           <div class="footer-bottom-wrapper">
           <a rel="nofollow">Conditions de vente</a> | <a rel="nofollow">Mentions légales</a>
@@ -85,7 +85,7 @@ h2 {
 }
 a,
 a:visited {
-  color: #61ceff;
+  color: #afd8ea;
 }
 
 a:hover {

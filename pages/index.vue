@@ -14,7 +14,7 @@
           </div>
           <div class="slide">
             <img src="../assets/images/b1.jpg" alt="">
-            <h1 class="headline">LUXAXESS</h1>            
+            <h1 class="headline">LUXAXES</h1>            
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
           </div>
         </agile>
@@ -99,7 +99,7 @@
       <div class="cta-wrapper">
         
         <div class="cta">
-          <h1>Luxaxess</h1>
+          <h1>Luxaxes</h1>
           <p>Vous avez craqué sur notre collection Accessoire Salle de Bain ? Voilà exactement la deco design qu’il vous faut pour moderniser votre foyer.</p>
           <a class="button" href="">Passez votre commande →</a>
         </div>
@@ -138,8 +138,8 @@
 
 <script>
 import { Grid, Box } from '../components/GridBox'
-import Header from '../components/Header.vue'
 export default {
+  scrollToTop: true,
   layout: 'index',
   data() {
     // Using webpacks context to gather all files from a folder
@@ -231,20 +231,21 @@ main {
 .headline {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
-  color: #a91414;
+  color: white;
   font-size: calc(0.6125em + 4vw);
-  font-family: 'Bungee';
   text-align: right;
   align-self: end;
+  z-index: 99;
 }
 .subhead {
   grid-column: 3 / 4;
   grid-row: 1 / 3;
   text-align: right;
   align-self: end;
-  color: #61ceff;
+  color: #ea1d35;
   padding: 0 0.40625em;
-  font-family: 'Bungee';
+  font-family: Mistral, 'Dancing Script';
+  z-index: 99;
 }
 
 .slide img {

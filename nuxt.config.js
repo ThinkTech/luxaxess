@@ -59,26 +59,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: [
-      'vue-mq',
-      'vue-custom-properties',
-      'typeface-aleo',
-      'typeface-bungee',
-      'typeface-clear-sans'
-    ],
     /*
     ** Run ESLint on save
     */
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
+    cache: true,
+    parralel: true
   }
 }
 

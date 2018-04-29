@@ -1,4 +1,4 @@
-# Luxaxess website
+# Luxaxes website
 
 > Static web site project
 
