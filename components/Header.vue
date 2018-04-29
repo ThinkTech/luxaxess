@@ -3,7 +3,6 @@
     <nuxt-link to="/" class="logo">
       <h1>Luxaxes</h1>
     </nuxt-link>
-   
     <div class="menu">
         <input type="checkbox" id="nav-toggle">
         <label for="nav-toggle"><span class="toggle">☰</span></label>       
@@ -83,6 +82,7 @@ nav ul li a:hover {
   transition-timing-function: cubic-bezier(0.38, 0.52, 0.37, 1.27);
   color: white;
   font-size: 200%;
+  font-weight: 900;
   background: #000;
   padding: 0.203125em 0.40625em;
   line-height: 1.3125em;
