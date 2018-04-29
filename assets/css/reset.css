@@ -123,6 +123,10 @@ html {
     line-height: 1.625;
 }
 
+body {
+    background: #000;
+}
+
 h1 {
     font-size: 1.625em;
     line-height: 1.421875em;
