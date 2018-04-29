@@ -90,7 +90,7 @@ fieldset {
   margin: 0 0 0.8125em;
   padding: 0.125em;
   font-size: 300%;
-  font-family: Mistral, 'Dancing Script';
+  font-family: Mistral, 'Shadows Into Light';
   text-align: center;
 }
 

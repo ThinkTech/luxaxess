@@ -245,7 +245,7 @@ main {
   align-self: end;
   color: #ea1d35;
   padding: 0 0.40625em;
-  font-family: Mistral, 'Dancing Script';
+  font-family: Mistral, 'Shadows Into Light';
   z-index: 99;
 }
 
