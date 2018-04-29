@@ -37,4 +37,12 @@
 
 .agile__slide {
   background: #b68434;
+  height: 58vh;
+}
+
+@media (min-width: 960px) {
+  /* laptop*/
+  .agile__slide {
+    height: 88vh;
+  }
 }

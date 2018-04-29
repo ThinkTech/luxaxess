@@ -222,7 +222,6 @@ main {
   padding: 0.8125em;
 }
 .slide {
-  height: 90vh;
   display: grid;
   grid-template-columns: 1fr 5vw 5vw 1fr 3vw;
   grid-auto-rows: minmax(45vh, 1fr);
