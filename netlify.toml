@@ -9,3 +9,7 @@
     Cache-Control = "public, max-age=31536000, immutable"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
+[[headers]]
+  for = "/admin"
+  [headers.values]
+    script = "<https://identity.netlify.com/v1/netlify-identity-widget.js> async defer"
