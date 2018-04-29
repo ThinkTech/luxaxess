@@ -26,7 +26,7 @@ header {
   box-shadow: 0.1em 0.08125em 1px #1d1b1b;
 }
 .logo h1 {
-  height: 3.25em;
+  margin: 0;
   padding: 0.203125em 0;
   display: inline-block;
 }
