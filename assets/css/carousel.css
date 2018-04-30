@@ -1,52 +1,65 @@
 .agile {
-  grid-column: full;
-  background-image: linear-gradient(#000, rgba(0, 0, 0, 0.8125) 80%, #000);
+    grid-column: full;
+    background-image: linear-gradient(#000, rgba(0, 0, 0, 0.8125) 80%, #000);
 }
 
 .agile__dots {
-  bottom: 3.25em;
-  display: block;
-  left: 1.625em;
-  position: absolute;
-  width: 3.25em;
-  flex-direction: column;
+    bottom: 3.25em;
+    display: block;
+    left: 1.625em;
+    position: absolute;
+    width: 3.25em;
+    flex-direction: column;
 }
 
 .agile__dot {
-  margin-bottom: 1.625em;
+    margin-bottom: 1.625em;
 }
 
 .agile__dot button {
-  background-color: transparent;
-  border: 8px solid #fff;
-  margin-top: 10px;
-  border-radius: 50%;
+    background-color: transparent;
+    border: 8px solid #fff;
+    margin-top: 10px;
+    border-radius: 50%;
 }
 
 .agile__dot button:hover {
-  border: 8px solid #888;
+    border: 8px solid #888;
 }
 
 .agile__dot--current button {
-  border: 8px solid #222;
+    border: 8px solid #222;
 }
 
 .agile__arrow {
-  display: none;
+    display: none;
 }
 
+.slide {
+    background: #b68434;
+}
+
+.slider,
 .slide,
-.slide img,
+.slide-image,
+.slide-content,
+.agile,
+.agile__list,
+.agile__track,
 .agile__slide {
-  background: #b68434;
-  height: 78vh;
+    height: 78vh;
 }
 
 @media (min-width: 960px) {
-  /* laptop*/
-  .slider,
-  .slide img,
-  .agile__slide {
-    height: 88vh;
-  }
+    /* laptop*/
+    .slider,
+    .slide,
+    .slide-image,
+    .slide-content,
+    .agile,
+    .agile__list,
+    .agile__track,
+    .agile__slide {
+        height: 88vh;
+    }
 }
