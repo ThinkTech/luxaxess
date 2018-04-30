@@ -1,5 +1,5 @@
 <template>
-  <div class="grid">
+  <div class="grid" :style="{'--items-per-line': col, '--grid-gap': gap}">
     <slot/>
   </div>
 </template>
@@ -9,10 +9,6 @@ export default {
   props: {
     col: { type: Number, default: 1 },
     gap: { type: String, default: '1.625em' }
-  },
-  customProperties: {
-    '--items-per-line': 'col',
-    '--grid-gap': 'gap'
   }
 }
 </script>

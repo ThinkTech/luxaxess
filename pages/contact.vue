@@ -38,7 +38,7 @@ h1 {
 #contact {
   background: #2f2f2fbf;
   padding: 3.25em;
-  margin: 3.25em auto;
+  margin: 0.8125em auto;
   max-width: 520px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }

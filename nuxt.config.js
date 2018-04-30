@@ -80,8 +80,7 @@ export default {
   plugins: [
     { src: '~/plugins/typeface', ssr: false },
     { src: '~/plugins/vue-agile', ssr: false },
-    { src: '~/plugins/vue-mq', ssr: false },
-    { src: '~/plugins/vue-custom-properties', ssr: false }
+    { src: '~/plugins/vue-mq', ssr: false }
   ],
   /*
   ** Build configuration

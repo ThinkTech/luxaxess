@@ -75,7 +75,7 @@ nav ul li a {
   color: white;
 }
 nav ul li a:hover {
-  color: white;
+  color: #ea1d35;
 }
 #nav-toggle ~ label {
   display: block;
@@ -91,7 +91,7 @@ nav ul li a:hover {
 }
 
 #nav-toggle:checked ~ label {
-  transform: translateX(-250px);
+  transform: translateX(-240px) rotate(180deg);
 }
 #nav-toggle:checked ~ label::before {
   content: 'x';
@@ -101,6 +101,7 @@ nav ul li a:hover {
 }
 #nav-toggle:checked ~ nav {
   transform: translateX(-94vw);
+  box-shadow: -55px 13px 77px 90vw rgba(0, 0, 0, 0.67);
 }
 
 @media (min-width: 960px) {
@@ -122,6 +123,7 @@ nav ul li a:hover {
     transform: none;
     width: 100%;
     height: auto;
+    box-shadow: none;
   }
   nav ul {
     flex-direction: row;
