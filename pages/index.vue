@@ -4,7 +4,7 @@
       <no-ssr>
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <grid :col="2" class="slide">            
-            <box>
+            <box class="slide-content">
               <img class="slide-image" src="~/assets/images/house.jpg" alt="">
             </box>                        
             <box class="slide-content">
