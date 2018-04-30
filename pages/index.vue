@@ -2,18 +2,28 @@
   <main class="container">
     <div class="slider full">
       <no-ssr>
-          <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
-            <grid :col="2" class="slide">            
-              <box>
-                <img src="../assets/images/house.jpg" alt="">
-              </box>                        
-              <box class="slide-content">
-                <h1 class="headline">LUXAXES</h1>
-                <h2 class="subhead">Le luxe accessible</h2>
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-              </box>
-            </grid>            
-          </agile>
+        <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
+          <grid :col="2" class="slide">            
+            <box>
+              <img src="../assets/images/house.jpg" alt="">
+            </box>                        
+            <box class="slide-content">
+              <h1 class="headline">LUXAXES</h1>
+              <h2 class="subhead">Le luxe accessible</h2>
+              <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+            </box>
+          </grid>            
+          <grid :col="2" class="slide">            
+            <box>
+              <img src="../assets/images/interior.jpg" alt="">
+            </box>                        
+            <box class="slide-content">
+              <h1 class="headline">LUXAXES</h1>
+              <h2 class="subhead">BUSINESS OPPORTUNITIES</h2>
+              <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+            </box>
+          </grid>            
+        </agile>
       </no-ssr>
     </div>
      <grid :col="$mq | mq({phone: 1, laptop: 2})" class="products full">
