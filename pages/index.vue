@@ -138,7 +138,6 @@
 <script>
 import { Grid, Box } from '../components/GridBox'
 export default {
-  scrollToTop: true,
   layout: 'index',
   data() {
     // Using webpacks context to gather all files from a folder

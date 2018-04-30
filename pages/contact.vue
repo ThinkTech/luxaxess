@@ -43,10 +43,7 @@ fieldset {
   width: 100%;
 }
 
-#contact input[type='text'],
-#contact input[type='email'],
-#contact input[type='tel'],
-#contact input[type='url'],
+#contact input,
 #contact textarea {
   width: 100%;
   border: 1px solid #ccc;
@@ -56,10 +53,7 @@ fieldset {
   font-size: 100%;
 }
 
-#contact input[type='text']:hover,
-#contact input[type='email']:hover,
-#contact input[type='tel']:hover,
-#contact input[type='url']:hover,
+#contact input:hover,
 #contact textarea:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
