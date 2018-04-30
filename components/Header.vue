@@ -92,6 +92,11 @@ nav ul li a:hover {
 
 #nav-toggle:checked ~ label {
   transform: translateX(-240px) rotate(180deg);
+  background: white;
+  color: #000;
+  border-radius: 8px;
+  line-height: 1.3em;
+  padding: 0.4em 0.2em -0.2em;
 }
 #nav-toggle:checked ~ label::before {
   content: 'x';
