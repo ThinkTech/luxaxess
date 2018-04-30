@@ -106,7 +106,7 @@ nav ul li a:hover {
 }
 #nav-toggle:checked ~ nav {
   transform: translate3d(-94vw, 0, 0);
-  box-shadow: -55px 13px 77px 90vw rgba(0, 0, 0, 0.67);
+  box-shadow: -55px 13px 77px 90vw rgba(0, 0, 0, 0.47);
 }
 
 @media (min-width: 960px) {
