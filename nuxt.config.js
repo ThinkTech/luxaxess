@@ -1,14 +1,21 @@
-var glob = require('glob')
-var path = require('path')
+import glob from 'glob'
+import path from 'path'
 
-// Enhance Nuxt's generate process by gathering all content files from Netifly CMS
-// automatically and match it to the path of your Nuxt routes.
-// The Nuxt routes are generate by Nuxt automatically based on the pages folder.
-var dynamicRoutes = getDynamicPaths({
+const getDynamicPaths = urlFilepathTable =>
+  [].concat(
+    ...Object.keys(urlFilepathTable).map(url => {
+      var filepathGlob = urlFilepathTable[url]
+      return glob
+        .sync(filepathGlob, { cwd: 'content' })
+        .map(filepath => `${url}/${path.basename(filepath, '.json')}`)
+    })
+  )
+
+const dynamicRoutes = getDynamicPaths({
   '/blog': 'blog/posts/*.json'
 })
 
-module.exports = {
+export default {
   /*
   ** Headers of the page
   */
@@ -61,21 +68,16 @@ module.exports = {
   */
   build: {
     cache: true,
-    parralel: true
+    parralel: true,
+    extend(config, { isDev }) {
+      if (isDev && process.client) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
   }
-}
-
-/**
- * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable
- */
-function getDynamicPaths(urlFilepathTable) {
-  return [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      var filepathGlob = urlFilepathTable[url]
-      return glob
-        .sync(filepathGlob, { cwd: 'content' })
-        .map(filepath => `${url}/${path.basename(filepath, '.json')}`)
-    })
-  )
 }
