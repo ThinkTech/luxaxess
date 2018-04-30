@@ -63,6 +63,7 @@ nav {
 nav ul {
   display: flex;
   flex-direction: column;
+  padding-top: 1.625em;
 }
 nav ul li {
   padding: 0.8125em 1.625em;
@@ -124,6 +125,7 @@ nav ul li a:hover {
   }
   nav ul {
     flex-direction: row;
+    padding-top: 0;
   }
 }
 </style>
