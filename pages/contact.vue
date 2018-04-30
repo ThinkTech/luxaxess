@@ -1,44 +1,36 @@
 <template>
   <main class="container">
     <img src="../assets/images/b1.jpg" alt="" class="banner full" />
-    <grid :col="$mq | mq({phone: 1})" class="promo">
-      <box class="promo-box">
-        <form id="contact" action="" method="post">
-          <h1>CONTACTEZ-NOUS</h1>
-          <fieldset>
-            <input placeholder="Votre nom" type="text" required>
-          </fieldset>
-          <fieldset>
-            <input placeholder="Votre addresse email" type="email" required>
-          </fieldset>
-          <fieldset>
-            <input placeholder="Tel." type="tel">
-          </fieldset>          
-          <fieldset>
-            <textarea placeholder="Votre message ici...." required></textarea>
-          </fieldset>
-          <fieldset>
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">ENVOYER</button>
-          </fieldset>
-        </form>
-      </box>
-    </grid>
+    <form id="contact" action="" method="post">
+      <h1>CONTACTEZ-NOUS</h1>
+      <fieldset>
+        <input placeholder="Votre nom" type="text" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Votre addresse email" type="email" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Tel." type="tel">
+      </fieldset>          
+      <fieldset>
+        <textarea placeholder="Votre message ici...." required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">ENVOYER</button>
+      </fieldset>
+    </form>
   </main>
 </template>
 
 <style scoped>
-.banner {
-  width: 100%;
-  height: 33vh;
-  object-fit: cover;
-}
 h1 {
   text-align: center;
 }
 #contact {
   background: #2f2f2fbf;
   padding: 3.25em;
-  margin: 0.8125em auto;
+  margin: 3.25em auto;
+  width: 100%;
   max-width: 520px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }

@@ -161,18 +161,6 @@ export default {
 </script>
 
 <style>
-.services {
-  color: white;
-  text-align: right;
-}
-.services > div {
-  border: 1px solid;
-}
-.services img {
-  height: 16.25em;
-  width: 100%;
-  object-fit: cover;
-}
 .products {
   background: black;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3.25em)); */
