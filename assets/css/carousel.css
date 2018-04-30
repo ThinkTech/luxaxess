@@ -35,7 +35,8 @@
   display: none;
 }
 
-.slider,
+.slide,
+.slide img,
 .agile__slide {
   background: #b68434;
   height: 78vh;
@@ -44,6 +45,7 @@
 @media (min-width: 960px) {
   /* laptop*/
   .slider,
+  .slide img,
   .agile__slide {
     height: 88vh;
   }
