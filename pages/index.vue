@@ -4,13 +4,14 @@
       <no-ssr>
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <grid :col="2" class="slide">            
-            <box class="slide-content">
-              <img class="slide-image" src="~/assets/images/house.jpg" alt="">
+            <box>
+              <img src="~/assets/images/house.jpg" alt="">
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUXAXES</h1>
               <h2 class="subhead">Le luxe accessible</h2>
               <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+              <a class="button" href="">Passez votre commande →</a>
             </box>
           </grid>            
           <grid :col="2" class="slide">            
@@ -21,6 +22,7 @@
               <h1 class="headline">LUXAXES</h1>
               <h2 class="subhead">BUSINESS OPPORTUNITIES</h2>
               <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+              <a class="button" href="">Passez votre commande →</a>
             </box>
           </grid>            
         </agile>
@@ -129,7 +131,7 @@
       </box>
       <box>
         <img src="~/assets/images/interior.jpg" alt="" />
-        <h1 class="subhead">IMMOBILIER</h1>        
+        <h1 class="subhead">BUSINESS</h1>        
       </box>   
     </grid>
   </main>
@@ -147,8 +149,6 @@ export default {
       ...context(key),
       _path: `/blog/${key.replace('.json', '').replace('./', '')}`
     }))
-
-    console.log(posts)
 
     return {
       posts
@@ -179,7 +179,9 @@ export default {
 .slide {
   text-align: center;
 }
-
+.slide .subhead {
+  color: #222;
+}
 .slide-content {
   padding: 1.625em 1.625em 0.40625em 0;
   display: flex !important;
@@ -260,6 +262,7 @@ blockquote {
   padding: 0.8em 1.5em;
   width: 100%;
   text-align: center;
+  margin: 1.625em auto;
 }
 
 .button:hover {

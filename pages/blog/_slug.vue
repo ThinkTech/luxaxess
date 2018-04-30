@@ -60,8 +60,23 @@
 import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'page',
+  head() {
+    const { title, description, image } = this
+    return {
+      title: title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            description || 'Luxaxes all business center pour tous vos services.'
+        }
+      ]
+    }
+  },
   async asyncData({ params }) {
-    return await import('~/content/blog/posts/' + params.slug + '.json')
+    const post = await import('~/content/blog/posts/' + params.slug + '.json')
+    return post
   },
   components: {
     Grid,

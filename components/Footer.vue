@@ -2,7 +2,7 @@
   <footer class="container">    
     <grid :col="$mq | mq({ phone: 2, pad: 4 })" gap="3.25em">
       <box>
-        <h2>Luxaxes</h2>
+        <h2>{{ $store.state.settings.site }}</h2>
         <ul>
           <li><a>À propos de Luxaxes</a></li>
           <li><a>Nos engagements</a></li>
@@ -31,9 +31,9 @@
       <box>
         <h2>Contact</h2>
         <ul>
-          <li>Sacre coeur en face cite police, Dakar-Senegal</li>
-          <li>info@luxaxes.com</li>
-          <li>33 800 00 00</li>
+          <li>{{ $store.state.settings.address }}</li>
+          <li>{{ $store.state.settings.email }}</li>
+          <li>{{ $store.state.settings.tel }}</li>
         </ul>
       </box>
     </grid>

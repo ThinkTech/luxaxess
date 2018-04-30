@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   repo: ThinkTechSN/luxaxess
   branch: master # Branch to update (optional; defaults to master)
 
@@ -26,7 +26,7 @@ collections:
 
   # activity collection
   - name: "activity"
-    label: "Actvities"
+    label: "Activities"
     label_singular: "Activity"
     description: >
       This is where you list your activities related to a service

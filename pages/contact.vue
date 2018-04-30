@@ -33,6 +33,16 @@
 import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'page',
+  head: {
+    title: 'Contactez-nous',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Luxaxes all business center pour tous vos services.'
+      }
+    ]
+  },
   data() {
     // Using webpacks context to gather all files from a folder
     const context = require.context('~/content/blog/posts/', false, /\.json$/)

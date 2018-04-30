@@ -1,5 +1,8 @@
 import glob from 'glob'
 import path from 'path'
+import settings from './content/settings.json'
+
+const { title = 'Luxaxes' } = settings
 
 const getDynamicPaths = urlFilepathTable =>
   [].concat(
@@ -20,7 +23,8 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Luxaxes | Le luxe accessible',
+    title: 'Le luxe accessible',
+    titleTemplate: `${title} | %s`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -29,9 +33,16 @@ export default {
         hid: 'description',
         name: 'description',
         content: 'Luxaxes all business center pour tous vos services.'
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        property: 'og:title',
+        content: 'All business center pour tous vos services.'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    noscript: [{ innerHTML: 'This website requires JavaScript.' }]
   },
   /*
   ** Assets
