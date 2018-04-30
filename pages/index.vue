@@ -100,8 +100,8 @@
       <box>
         <img src="../assets/images/house.jpg" alt="" />
       </box>
-      <box class="promo-box">
-        <h1 class="headline">Decoration</h1>
+      <box class="promo-content">
+        <h1 class="headline">Business opportinities</h1>
         <h2 class="subhead">MOBILIER</h2>
         <h2 class="subhead">INTERIEUR</h2>
         <p class="content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>
@@ -218,6 +218,7 @@ main {
   font-size: calc(0.6125em + 4vw);
   z-index: 99;
   margin-bottom: 0.20315em;
+  line-height: 1.1625em;
 }
 .subhead {
   width: 100%;
@@ -250,8 +251,13 @@ main {
   height: 100%;
   object-fit: cover;
 }
-.promo-box {
+.promo-content {
   padding: 3.25em 0.8125em;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 blockquote {
   font: 1.1em/2 'Aleo', serif;
