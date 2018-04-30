@@ -86,7 +86,6 @@ export default {
   ** Build configuration
   */
   build: {
-    cache: true,
     parralel: true,
     extend(config, { isDev }) {
       if (isDev && process.client) {
