@@ -91,7 +91,7 @@ nav ul li a:hover {
 }
 
 #nav-toggle:checked ~ label {
-  transform: translateX(-240px) rotate(180deg);
+  transform: translate3d(-240px, 0, 0) rotate(180deg);
   background: white;
   color: #000;
   border-radius: 8px;
@@ -105,7 +105,7 @@ nav ul li a:hover {
   display: none;
 }
 #nav-toggle:checked ~ nav {
-  transform: translateX(-94vw);
+  transform: translate3d(-94vw, 0, 0);
   box-shadow: -55px 13px 77px 90vw rgba(0, 0, 0, 0.67);
 }
 
