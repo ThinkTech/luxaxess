@@ -215,7 +215,7 @@ main {
 }
 .headline {
   color: white;
-  font-size: calc(0.6125em + 4vw);
+  font-size: 275%;
   z-index: 99;
   margin-bottom: 0.20315em;
   line-height: 1.1625em;
