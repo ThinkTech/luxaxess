@@ -22,9 +22,10 @@
       <box>
         <h2>Horaires</h2>
         <ul>
-          <li>Lundi au vendredi : 08 h 00-17 h 00</li>
-          <li>Samedi            : 09 h 00-15 h 00</li>
-          <li>Dimanche          : Ferme</li>
+          <li>Lundi au vendredi</li>
+          <li>08 h 00-17 h 00</li>
+          <li>Samedi</li>
+          <li>09 h 00-15 h 00</li>
         </ul>
       </box>
       <box>
@@ -51,15 +52,13 @@
     </section>
     <section class="footer-bottom-section flex-rw">
       <div class="footer-bottom-wrapper">   
-      <i class="fa fa-copyright" role="copyright">
-      
-      </i> 2018 Luxaxes <address class="footer-address" role="company address">Sacre coeur, Dakar</address><span class="footer-bottom-rights"> - Tous droits reserves - </span>
-          </div>
-          <div class="footer-bottom-wrapper">
-          <a rel="nofollow">Conditions de vente</a> | <a rel="nofollow">Mentions légales</a>
-            </div>
+        <i class="fa fa-copyright" role="copyright">        
+        </i> 2018 Luxaxes <address class="footer-address" role="company address">Sacre coeur, Dakar</address><span class="footer-bottom-rights"> - Tous droits reserves - </span>
+      </div>
+      <div class="footer-bottom-wrapper">
+        <a rel="nofollow">Conditions de vente</a> | <a rel="nofollow">Mentions légales</a>
+      </div>
     </section>
-   
   </footer>
 </template>
 
@@ -150,6 +149,7 @@ a:hover {
 
 .footer-bottom-wrapper {
   font-size: 80%;
+  margin: 0 auto;
 }
 
 .footer-address {

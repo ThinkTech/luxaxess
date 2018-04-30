@@ -3,21 +3,16 @@
     <div class="slider full">
       <no-ssr>
           <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
-            <div class="slide">
-            <img src="../assets/images/house.jpg" alt="">
-              <h1 class="headline">ALL BUSINESS CENTER</h1>            
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-            </div>
-            <div class="slide">
-              <img src="../assets/images/interior.jpg" alt="">
-              <h1 class="headline">LE MONDE DU BUSINESS</h1>            
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
-            </div>
-            <div class="slide">
-              <img src="../assets/images/b1.jpg" alt="">
-              <h1 class="headline">LUXAXES</h1>            
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>  
-            </div>
+            <grid :col="2" class="slide">            
+              <box>
+                <img src="../assets/images/house.jpg" alt="">
+              </box>                        
+              <box class="slide-content">
+                <h1 class="headline">LUXAXES</h1>
+                <h2 class="subhead">Le luxe accessible</h2>
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+              </box>
+            </grid>            
           </agile>
       </no-ssr>
     </div>
@@ -30,7 +25,7 @@
           <box class="product">
             <h1>Adipiscing elit sed do eiusmod tempor</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>          
-            <a>Decouvrir</a>
+            <a class="product-button">Decouvrir</a>
           </box>
         </grid>
       </box>
@@ -47,7 +42,7 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a>Decouvrir</a>
+              <a class="product-button">Decouvrir</a>
             </box>
           </grid>
         </box>
@@ -58,7 +53,7 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a>Decouvrir</a>
+              <a class="product-button">Decouvrir</a>
             </box>
           </grid>
         </box>
@@ -69,7 +64,7 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a>Decouvrir</a>
+              <a class="product-button">Decouvrir</a>
             </box>
           </grid>
         </box>
@@ -80,36 +75,27 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a>Decouvrir</a>
+              <a class="product-button">Decouvrir</a>
             </box>
           </grid>
         </box>
       </grid>
     </section>
     <section class="grid1">
-  
       <div class="img1"></div>
-      
       <div class="img2"></div>
-      
       <div class="strapline">
         <blockquote>“Quand on ne peut pas changer le monde, il faut changer le décor.”</blockquote>
       </div>
-      
       <div class="img3"></div>
-      
       <div class="cta-wrapper">
-        
         <div class="cta">
           <h1>Luxaxes</h1>
           <p>Vous avez craqué sur notre collection Accessoire Salle de Bain ? Voilà exactement la deco design qu’il vous faut pour moderniser votre foyer.</p>
           <a class="button" href="">Passez votre commande →</a>
         </div>
-        
-      </div>
-      
+      </div> 
     </section>
-
     <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full">
       <box>
         <img src="../assets/images/house.jpg" alt="" />
@@ -118,7 +104,8 @@
         <h1 class="headline">Decoration</h1>
         <h2 class="subhead">MOBILIER</h2>
         <h2 class="subhead">INTERIEUR</h2>
-         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>        
+        <p class="content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>
+        <a class="product-button">Decouvrir</a>
       </box>
     </grid>
     <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full">
@@ -171,7 +158,7 @@ main {
 }
 .services {
   color: white;
-  text-align: center;
+  text-align: right;
 }
 .services > div {
   border: 1px solid;
@@ -203,7 +190,7 @@ main {
 .product h2 {
   font-family: 'Clear sans';
 }
-.product a {
+.product-button {
   border: 1px solid;
   display: inline-block;
   padding: 0.40625em 1.625em;
@@ -224,34 +211,33 @@ main {
   padding: 0.8125em;
 }
 .slide {
-  display: grid;
-  grid-template-columns: 1fr 5vw 5vw 1fr 3vw;
-  grid-auto-rows: minmax(45vh, 1fr);
+  text-align: center;
 }
-
 .headline {
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
   color: white;
   font-size: calc(0.6125em + 4vw);
-  text-align: right;
-  align-self: end;
   z-index: 99;
+  margin-bottom: 0.20315em;
 }
 .subhead {
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
-  text-align: right;
-  align-self: end;
+  width: 100%;
   color: #ea1d35;
   padding: 0 0.40625em;
   font-family: Mistral, 'Shadows Into Light';
   z-index: 99;
+  font-size: 200%;
 }
-
+.slide-content {
+  padding: 1.625em 1.625em 0.40625em 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content {
+  max-width: 32em;
+}
 .slide img {
-  grid-row: 1 / 3;
-  grid-column: 1 / 4;
   z-index: 1;
   mix-blend-mode: hard-light;
   height: 100%;
@@ -266,9 +252,6 @@ main {
 }
 .promo-box {
   padding: 3.25em 0.8125em;
-}
-.slide p {
-  grid-column: 4 / 5;
 }
 blockquote {
   font: 1.1em/2 'Aleo', serif;
