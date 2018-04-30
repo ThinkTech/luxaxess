@@ -34,7 +34,7 @@ collections:
               - {label: Photo, name: photo, widget: image}
       - label: "Locations Page"
         name: "locations"
-        file: "content/locations.yml"
+        file: "content/location.yml"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
