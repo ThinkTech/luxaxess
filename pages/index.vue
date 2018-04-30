@@ -161,11 +161,6 @@ export default {
 </script>
 
 <style>
-main {
-  min-height: 100vh;
-  background: #111;
-  color: white;
-}
 .services {
   color: white;
   text-align: right;
@@ -191,26 +186,7 @@ main {
 .tall {
   height: 24.375em;
 }
-.product {
-  margin-bottom: 3.25em;
-  padding: 0.8125em;
-  display: flex;
-  text-align: center;
-}
-.product h2 {
-  font-family: 'Clear sans';
-}
-.product-button {
-  border: 1px solid;
-  display: inline-block;
-  padding: 0.40625em 1.625em;
-  margin-top: 3.25em;
-  font-weight: 900;
-}
-.product a:hover {
-  color: #d1619c;
-  background: white;
-}
+
 .cards {
   background: black;
   padding: 0.8125em;
@@ -223,21 +199,7 @@ main {
 .slide {
   text-align: center;
 }
-.headline {
-  color: white;
-  font-size: 275%;
-  z-index: 99;
-  margin-bottom: 0.20315em;
-  line-height: 1.1625em;
-}
-.subhead {
-  width: 100%;
-  color: #ea1d35;
-  padding: 0 0.40625em;
-  font-family: Mistral, 'Shadows Into Light';
-  z-index: 99;
-  font-size: 200%;
-}
+
 .slide-content {
   padding: 1.625em 1.625em 0.40625em 0;
   display: flex !important;

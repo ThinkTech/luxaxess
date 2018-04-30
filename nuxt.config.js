@@ -40,7 +40,7 @@ export default {
   //'@/assets/css/bootstrap-grid.min.css',
   //  '@/assets/css/bootstrap.min.css',
   css: [
-    '@/assets/css/reset.css',
+    '@/assets/css/global.css',
     '@/assets/css/font-awesome.css',
     '@/assets/css/carousel.css'
   ],
