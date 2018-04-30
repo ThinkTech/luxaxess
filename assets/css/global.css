@@ -191,6 +191,17 @@ main {
   font-size: 200%;
 }
 
+.cards {
+  background: black;
+  padding: 0.8125em;
+  padding-bottom: 3.25em;
+}
+
+.card {
+  background: #111;
+  padding: 0.8125em;
+}
+
 .product {
   margin-bottom: 3.25em;
   padding: 0.8125em;

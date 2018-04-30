@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import { Grid, Box } from '../components/GridBox'
-import Footer from '../components/Footer.vue'
-import Header from '../components/Header.vue'
+import { Grid, Box } from '~/components/GridBox'
+import Footer from '~/components/Footer.vue'
+import Header from '~/components/Header.vue'
 export default {
   components: {
     Grid,

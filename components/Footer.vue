@@ -22,9 +22,9 @@
       <box>
         <h2>Horaires</h2>
         <ul>
-          <li>Lundi au vendredi</li>
+          <li>LUNDI AU VENDREDI</li>
           <li>08 h 00-17 h 00</li>
-          <li>Samedi</li>
+          <li>SAMEDI</li>
           <li>09 h 00-15 h 00</li>
         </ul>
       </box>

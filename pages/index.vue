@@ -5,7 +5,7 @@
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <grid :col="2" class="slide">            
             <box>
-              <img class="slide-image" src="../assets/images/house.jpg" alt="">
+              <img class="slide-image" src="~/assets/images/house.jpg" alt="">
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUXAXES</h1>
@@ -15,7 +15,7 @@
           </grid>            
           <grid :col="2" class="slide">            
             <box>
-              <img src="../assets/images/interior.jpg" alt="">
+              <img src="~/assets/images/interior.jpg" alt="">
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUXAXES</h1>
@@ -30,7 +30,7 @@
       <box>
         <grid :col="$mq | mq({phone: 1, laptop: 2})">
           <box>
-            <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+            <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
           </box>
           <box class="product">
             <h1>Adipiscing elit sed do eiusmod tempor</h1>
@@ -40,7 +40,7 @@
         </grid>
       </box>
       <box>
-        <img src="../assets/images/b1.jpg" alt="" class="products-image-box tall" />
+        <img src="~/assets/images/b1.jpg" alt="" class="products-image-box tall" />
       </box>
     </grid>
     <section class="cards full">
@@ -48,7 +48,7 @@
         <box class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
@@ -59,7 +59,7 @@
         <box class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
@@ -70,7 +70,7 @@
         <box class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
@@ -81,7 +81,7 @@
         <box class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <img src="../assets/images/interior.jpg" alt="" class="products-image-box" />
+              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
@@ -108,7 +108,7 @@
     </section>
     <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full">
       <box>
-        <img src="../assets/images/house.jpg" alt="" />
+        <img src="~/assets/images/house.jpg" alt="" />
       </box>
       <box class="promo-content">
         <h1 class="headline">Business opportinities</h1>
@@ -120,15 +120,15 @@
     </grid>
     <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full">
       <box>
-        <img src="../assets/images/interior.jpg" alt="" />
+        <img src="~/assets/images/interior.jpg" alt="" />
         <h1 class="subhead">RENOVATION</h1>        
       </box>
       <box>
-        <img src="../assets/images/b1.jpg" alt="" />
+        <img src="~/assets/images/b1.jpg" alt="" />
         <h1 class="subhead">DECOR</h1>        
       </box>
       <box>
-        <img src="../assets/images/interior.jpg" alt="" />
+        <img src="~/assets/images/interior.jpg" alt="" />
         <h1 class="subhead">IMMOBILIER</h1>        
       </box>   
     </grid>
@@ -136,7 +136,7 @@
 </template>
 
 <script>
-import { Grid, Box } from '../components/GridBox'
+import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'index',
   data() {
@@ -147,6 +147,8 @@ export default {
       ...context(key),
       _path: `/blog/${key.replace('.json', '').replace('./', '')}`
     }))
+
+    console.log(posts)
 
     return {
       posts
@@ -174,15 +176,6 @@ export default {
   height: 24.375em;
 }
 
-.cards {
-  background: black;
-  padding: 0.8125em;
-  padding-bottom: 3.25em;
-}
-.card {
-  background: #111;
-  padding: 0.8125em;
-}
 .slide {
   text-align: center;
 }
