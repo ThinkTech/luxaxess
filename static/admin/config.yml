@@ -13,7 +13,7 @@ collections:
     label_singular: "Service"
     description: >
       This is where you list your services
-    folder: "contents/services"
+    folder: "content/services"
     slug: "{{title}}"
     delete: false
     create: true
@@ -23,6 +23,53 @@ collections:
       - {label: "Description", name: "description", widget: "text", tagname: "h2"}
       - {label: "Cover Image", name: "image", widget: "image"}
       - {label: "Content", name: "content", widget: "markdown"}
+
+  # activity collection
+  - name: "activity"
+    label: "Actvities"
+    label_singular: "Activity"
+    description: >
+      This is where you list your activities related to a service
+    folder: "content/activities"
+    slug: "{{title}}"
+    delete: false
+    create: true
+    format: 'json'
+    fields:
+      - label: "Service"
+        name: "service"
+        widget: "relation"
+        collection: "service"
+        searchFields: ["title", "description"]
+        valueField: "title"
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Description", name: "description", widget: "text", tagname: "h2"}
+      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Content", name: "content", widget: "markdown"}
+
+  # product collection
+  - name: "product"
+    label: "Products"
+    label_singular: "Products"
+    description: >
+      This is where you list your products related to an activity
+    folder: "content/products"
+    slug: "{{title}}"
+    delete: false
+    create: true
+    format: 'json'
+    fields:
+      - label: "Activity"
+        name: "activity"
+        widget: "relation"
+        collection: "activity"
+        searchFields: ["title", "description"]
+        valueField: "title"
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Description", name: "description", widget: "text", tagname: "h2"}
+      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Content", name: "content", widget: "markdown"}
+      - {label: "Price", name: "price", widget: "number"}
   
       # faq collection
   - name: "faq"
