@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <img src="~/assets/images/b1.jpg" alt="" class="banner full" />
+    <img :src="image" :alt="title" class="banner full" />
     <article>
       <h1 class="headline">{{ title }}</h1>
       <p>{{ content }}</p>
@@ -75,7 +75,7 @@ export default {
     }
   },
   async asyncData({ params }) {
-    const service = await import('~/content/services/' + params.slug + '.json')
+    const service = await import('~/content/cms/' + params.slug + '.json')
     return service
   },
   components: {

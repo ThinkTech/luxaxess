@@ -20,5 +20,17 @@ export default {
       path: `/products/${key.replace('.json', '').replace('./', '')}`
     }))
     commit('setProducts', products)
+    context = require.context('~/content/cms/', false, /\.json$/)
+    const cmsPages = context.keys().reduce(
+      (pages, file) => ({
+        ...pages,
+        [file.replace('.json', '').replace('./', '')]: {
+          ...context(file),
+          path: `/${file.replace('.json', '').replace('./', '')}`
+        }
+      }),
+      {}
+    )
+    commit('setCmsPages', cmsPages)
   }
 }

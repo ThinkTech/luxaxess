@@ -5,18 +5,17 @@ import settings from './content/settings.json'
 const { title = 'Luxaxes' } = settings
 
 const getDynamicPaths = urlFilepathTable =>
-  [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      var filepathGlob = urlFilepathTable[url]
-      return glob
-        .sync(filepathGlob, { cwd: 'content' })
-        .map(filepath => `${url}/${path.basename(filepath, '.json')}`)
-    })
-  )
+  Object.keys(urlFilepathTable).map(url => {
+    var filepathGlob = urlFilepathTable[url]
+    return glob
+      .sync(filepathGlob, { cwd: 'content' })
+      .map(filepath => `/${url}/${path.basename(filepath, '.json')}`)
+  })
 
 const dynamicRoutes = getDynamicPaths({
+  '': '/cms/*.json',
   '/services': '/services/*.json',
-  '/actvities': '/activities/*.json',
+  '/activities': '/activities/*.json',
   '/products': '/products/*.json'
 })
 

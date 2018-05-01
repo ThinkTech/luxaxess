@@ -5,24 +5,24 @@
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <grid :col="2" class="slide">            
             <box>
-              <img src="~/assets/images/house.jpg" alt="">
+              <img :src="$store.state.settings.image" :alt="$store.state.settings.site">
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>
               <h2 class="subhead">Le luxe accessible</h2>
-              <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-              <a class="button" href="">Decouverte →</a>
+              <p class="content">{{ $store.state.settings.content }}</p>
+              <nuxt-link to="/about" class="button" href="">Decouverte →</nuxt-link>
             </box>
           </grid>            
-          <grid :col="2" class="slide">            
+          <grid :col="2" class="slide" v-for="{title, description, path, image} in $store.state.services" :key="title">            
             <box>
-              <img src="~/assets/images/interior.jpg" alt="">
+              <img :src="image" :alt="title">
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>
-              <h2 class="subhead">BUSINESS OPPORTUNITIES</h2>
-              <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-              <a class="button" href="">Decouverte →</a>
+              <h2 class="subhead">{{ title.toUpperCase() }}</h2>
+              <p class="content">{{ description }}</p>
+              <nuxt-link :to="path" class="button" href="">Decouverte →</nuxt-link>
             </box>
           </grid>            
         </agile>
@@ -108,30 +108,24 @@
         </div>
       </div> 
     </section>
-    <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full">
+    <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full" v-if="$store.state.services.length > 0">
       <box>
-        <img src="~/assets/images/house.jpg" alt="" />
+        <img :src="$store.state.services[0].image" :alt="$store.state.services[0].title" />
       </box>
       <box class="promo-content">
-        <h1 class="headline">Business opportinities</h1>
+        <h1 class="headline">{{ $store.state.services[0].title }}</h1>
         <h2 class="subhead">MOBILIER</h2>
         <h2 class="subhead">INTERIEUR</h2>
-        <p class="content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>
-        <a class="product-button">Commander</a>
+        <p class="content">{{ $store.state.services[0].description }}</p>
+        <nuxt-link :to="$store.state.services[0].path" class="product-button">Commander</nuxt-link>
       </box>
     </grid>
-    <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full">
-      <box>
-        <img src="~/assets/images/interior.jpg" alt="" />
-        <h1 class="subhead">RENOVATION</h1>        
-      </box>
-      <box>
-        <img src="~/assets/images/b1.jpg" alt="" />
-        <h1 class="subhead">DECOR</h1>        
-      </box>
-      <box>
-        <img src="~/assets/images/interior.jpg" alt="" />
-        <h1 class="subhead">BUSINESS</h1>        
+    <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full" v-if="$store.state.services.length > 0">
+      <box v-for="({title, path, image}, index) in $store.state.services" :key="title" v-if="index > 0">
+        <img :src="image" :alt="title" />
+        <h1 class="subhead">
+          <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
+        </h1>        
       </box>   
     </grid>
   </main>

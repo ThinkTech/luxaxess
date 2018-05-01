@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <img src="~/assets/images/b1.jpg" alt="" class="banner full" />
+    <img src="~/assets/images/b1.jpg" alt="Contact" class="banner full" />
     <form id="contact" action="" method="post">
       <h1>CONTACTEZ-NOUS</h1>
       <fieldset>

@@ -18,5 +18,8 @@ export default {
   },
   setProducts(state, products) {
     state.products = products
+  },
+  setCmsPages(state, cmsPages) {
+    state.cmsPages = cmsPages
   }
 }

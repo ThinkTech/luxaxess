@@ -4,10 +4,10 @@
       <box>
         <h2>{{ $store.state.settings.site }}</h2>
         <ul>
-          <li><a>À propos de Luxaxes</a></li>
-          <li><a>Notre brochure</a></li>
-          <li><a>Foire a questions</a></li>
-          <li><a>Service Après-Vente</a></li>
+          <li><nuxt-link :to="$store.state.cmsPages.about.path">À propos de Luxaxes</nuxt-link></li>
+          <li><nuxt-link :to="$store.state.cmsPages.brochure.path">Notre brochure</nuxt-link></li>
+          <li><nuxt-link :to="$store.state.cmsPages.faq.path">Foire a questions</nuxt-link></li>
+          <li><nuxt-link :to="$store.state.cmsPages.sav.path">Service Après-Vente</nuxt-link></li>
         </ul>
       </box>
       <box>
@@ -57,7 +57,7 @@
         </i> 2018 {{ $store.state.settings.site }} <span class="footer-bottom-rights"> - Tous droits reserves - </span>
       </div>
       <div class="footer-bottom-wrapper">
-        <a >Conditions de vente</a> | <a >Nos engagements</a>
+        <nuxt-link :to="$store.state.cmsPages.conditions.path">Conditions de vente</nuxt-link> | <nuxt-link :to="$store.state.cmsPages.terms.path">Nos engagements</nuxt-link>
       </div>
     </section>
   </footer>

@@ -3,22 +3,12 @@
     <site-header/>
     <nuxt/>
     <grid :col="$mq | mq({phone: 1, tablet:2, laptop:4})" gap="0em" class="services full">
-      <box>
-        <img src="../assets/images/interior.jpg" alt="" />
-        <h1 class="subhead">PROPERTIES</h1>        
-      </box>
-      <box>
-        <img src="../assets/images/b1.jpg" alt="" />
-        <h1 class="subhead">FACILITIES</h1>        
-      </box>
-      <box>
-        <img src="../assets/images/interior.jpg" alt="" />
-        <h1 class="subhead">BUSINESS OPPORTUNITIES</h1>        
-      </box>
-      <box>
-        <img src="../assets/images/b1.jpg" alt="" />
-        <h1 class="subhead">BOUTIQUE</h1>        
-      </box>  
+      <box v-for="{title, path, image} in $store.state.services" :key="title">
+        <img :src="image" :alt="title" />
+        <h1 class="subhead">
+          <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
+        </h1>        
+      </box>      
     </grid>
     <site-footer/>
   </div>
