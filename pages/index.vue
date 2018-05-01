@@ -8,7 +8,7 @@
               <img src="~/assets/images/house.jpg" alt="">
             </box>                        
             <box class="slide-content">
-              <h1 class="headline">LUXAXES</h1>
+              <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>
               <h2 class="subhead">Le luxe accessible</h2>
               <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
               <a class="button" href="">Decouverte →</a>
@@ -19,7 +19,7 @@
               <img src="~/assets/images/interior.jpg" alt="">
             </box>                        
             <box class="slide-content">
-              <h1 class="headline">LUXAXES</h1>
+              <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>
               <h2 class="subhead">BUSINESS OPPORTUNITIES</h2>
               <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
               <a class="button" href="">Decouverte →</a>
@@ -149,6 +149,9 @@ export default {
 </script>
 
 <style>
+.logo-span {
+  color: #222;
+}
 .products {
   background: black;
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3.25em)); */
@@ -165,6 +168,9 @@ export default {
 
 .slide {
   text-align: center;
+}
+.slide .headline {
+  font-family: 'Clear sans', serif;
 }
 .slide .subhead {
   color: #222;

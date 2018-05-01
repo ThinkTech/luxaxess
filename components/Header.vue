@@ -1,7 +1,7 @@
 <template>
   <header class="container">
     <nuxt-link to="/" class="logo">
-      <h1>LUXAXES</h1>
+      <h1>LUX<span class="logo-span">A</span>XES</h1>
     </nuxt-link>
     <h2 class="subhead">Le luxe accessible</h2>
     <div class="menu">
@@ -30,12 +30,22 @@ header {
   z-index: 99999;
   box-shadow: 0.1em 0.08125em 1px #1d1b1b;
   display: flex;
-  padding: 0.6125em 0.8125em;
+  padding: 0.125em 0.8125em 0.8125em;
 }
 .logo h1 {
   margin: 0;
   padding: 0;
   display: inline-flex;
+  font-family: 'Clear sans', serif;
+}
+.logo-span {
+  color: #ea1d35;
+}
+.subhead {
+  position: absolute;
+  bottom: -0.25em;
+  left: 0.625em;
+  font-size: 110%;
 }
 .menu {
   position: absolute;
@@ -121,12 +131,6 @@ nav ul li a:hover {
     position: absolute;
     top: 0;
     left: 0.8125em;
-  }
-  .subhead {
-    position: absolute;
-    bottom: -0.25em;
-    left: 1.125em;
-    font-size: 110%;
   }
   .menu {
     position: static;
