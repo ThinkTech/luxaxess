@@ -101,7 +101,7 @@ nav ul li a:hover {
   font-size: 200%;
   font-weight: 900;
   background: #000;
-  padding: 0;
+  padding: 0 0.40625em;
   line-height: 1.3125em;
   cursor: pointer;
 }
