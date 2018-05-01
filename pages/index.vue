@@ -11,7 +11,7 @@
               <h1 class="headline">LUXAXES</h1>
               <h2 class="subhead">Le luxe accessible</h2>
               <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-              <a class="button" href="">Passez votre commande →</a>
+              <a class="button" href="">Decouverte →</a>
             </box>
           </grid>            
           <grid :col="2" class="slide">            
@@ -22,7 +22,7 @@
               <h1 class="headline">LUXAXES</h1>
               <h2 class="subhead">BUSINESS OPPORTUNITIES</h2>
               <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus libero, blandit at risus in, interdum dignissim risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-              <a class="button" href="">Passez votre commande →</a>
+              <a class="button" href="">Decouverte →</a>
             </box>
           </grid>            
         </agile>
@@ -37,7 +37,7 @@
           <box class="product">
             <h1>Adipiscing elit sed do eiusmod tempor</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>          
-            <a class="product-button">Decouvrir</a>
+            <a class="product-button">Commander</a>
           </box>
         </grid>
       </box>
@@ -54,7 +54,7 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
+              <a class="product-button">Commander</a>
             </box>
           </grid>
         </box>
@@ -65,7 +65,7 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
+              <a class="product-button">Commander</a>
             </box>
           </grid>
         </box>
@@ -76,7 +76,7 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
+              <a class="product-button">Commander</a>
             </box>
           </grid>
         </box>
@@ -87,7 +87,7 @@
             </box>
             <box class="product">             
               <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
+              <a class="product-button">Commander</a>
             </box>
           </grid>
         </box>
@@ -117,7 +117,7 @@
         <h2 class="subhead">MOBILIER</h2>
         <h2 class="subhead">INTERIEUR</h2>
         <p class="content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>
-        <a class="product-button">Decouvrir</a>
+        <a class="product-button">Commander</a>
       </box>
     </grid>
     <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full">
@@ -176,8 +176,15 @@ export default {
   justify-content: center;
   flex-direction: column;
 }
-.content {
-  max-width: 32em;
+.slide .content {
+  display: none;
+}
+@media (min-width: 520px) {
+  /* tablet*/
+  .slide .content {
+    max-width: 44vw;
+    display: block;
+  }
 }
 .slide img {
   z-index: 1;
@@ -246,7 +253,7 @@ blockquote {
   display: inline-block;
   color: white;
   background: #222;
-  padding: 0.8em 1.5em;
+  padding: 0.40625em 0.8125em;
   width: 100%;
   text-align: center;
   margin: 1.625em auto;

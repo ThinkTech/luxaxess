@@ -91,23 +91,23 @@ nav ul li a:hover {
   line-height: 1.3125em;
   cursor: pointer;
 }
-
-#nav-toggle:checked ~ label {
-  transform: translate3d(-240px, 0, 0) rotate(180deg);
-  background: white;
-  color: #000;
-  border-radius: 8px;
-  line-height: 1.3em;
-  padding: 0.4em 0.2em -0.2em;
-}
 #nav-toggle:checked ~ label::before {
   content: 'x';
 }
 #nav-toggle:checked ~ label .toggle {
   display: none;
 }
+#nav-toggle:checked ~ label {
+  transform: translate3d(-260px, 0, 0) rotate(180deg);
+  background: white;
+  color: #000;
+  border-radius: 8px;
+  line-height: 1.3em;
+  padding: 0.4em 0.2em -0.2em;
+}
+
 #nav-toggle:checked ~ nav {
-  transform: translate3d(-94vw, 0, 0);
+  transform: translate3d(-95vw, 0, 0);
   box-shadow: -55px 13px 77px 90vw rgba(0, 0, 0, 0.47);
 }
 
