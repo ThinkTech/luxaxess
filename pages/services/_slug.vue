@@ -75,8 +75,8 @@ export default {
     }
   },
   async asyncData({ params }) {
-    const post = await import('~/content/blog/posts/' + params.slug + '.json')
-    return post
+    const service = await import('~/content/services/' + params.slug + '.json')
+    return service
   },
   components: {
     Grid,

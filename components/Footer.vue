@@ -31,7 +31,9 @@
       <box>
         <h2>Contact</h2>
         <ul>
-          <li>{{ $store.state.settings.address }}</li>
+          <li>
+            <address class="footer-address" role="company address">{{ $store.state.settings.address }}</address>
+          </li>
           <li>{{ $store.state.settings.email }}</li>
           <li>{{ $store.state.settings.tel }}</li>
         </ul>
@@ -53,7 +55,7 @@
     <section class="footer-bottom-section flex-rw">
       <div class="footer-bottom-wrapper">   
         <i class="fa fa-copyright" role="copyright">        
-        </i> 2018 Luxaxes <address class="footer-address" role="company address">Sacre coeur, Dakar</address><span class="footer-bottom-rights"> - Tous droits reserves - </span>
+        </i> 2018 {{ $store.state.settings.site }} <span class="footer-bottom-rights"> - Tous droits reserves - </span>
       </div>
       <div class="footer-bottom-wrapper">
         <a rel="nofollow">Conditions de vente</a> | <a rel="nofollow">Mentions légales</a>

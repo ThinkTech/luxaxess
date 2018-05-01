@@ -1,13 +1,6 @@
 <template>
   <main class="container">
     <img src="~/assets/images/b1.jpg" alt="" class="banner full" />
-    <ul>
-      <li v-for="post in posts" :key="post.date">
-        <nuxt-link :to="post.slug">
-          {{ post.title }}
-        </nuxt-link>
-      </li>
-    </ul>
     <form id="contact" action="" method="post">
       <h1>CONTACTEZ-NOUS</h1>
       <fieldset>
@@ -42,19 +35,6 @@ export default {
         content: 'Luxaxes all business center pour tous vos services.'
       }
     ]
-  },
-  data() {
-    // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/)
-
-    const posts = context.keys().map(key => ({
-      ...context(key),
-      slug: `/blog/${key.replace('.json', '').replace('./', '')}`
-    }))
-
-    return {
-      posts
-    }
   },
   components: {
     Grid,

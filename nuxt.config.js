@@ -15,7 +15,7 @@ const getDynamicPaths = urlFilepathTable =>
   )
 
 const dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/posts/*.json'
+  '/services': '/services/*.json'
 })
 
 export default {

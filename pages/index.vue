@@ -141,19 +141,6 @@
 import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'index',
-  data() {
-    // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/)
-
-    const posts = context.keys().map(key => ({
-      ...context(key),
-      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
-    }))
-
-    return {
-      posts
-    }
-  },
   components: {
     Grid,
     Box
@@ -263,6 +250,7 @@ blockquote {
   width: 100%;
   text-align: center;
   margin: 1.625em auto;
+  border: 4px solid #444;
 }
 
 .button:hover {
