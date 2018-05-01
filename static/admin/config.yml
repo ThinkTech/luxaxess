@@ -16,7 +16,6 @@ collections:
     folder: "content/services"
     slug: "{{title}}"
     delete: false
-    create: true
     format: 'json'
     fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -33,7 +32,6 @@ collections:
     folder: "content/activities"
     slug: "{{title}}"
     delete: false
-    create: true
     format: 'json'
     fields:
       - label: "Service"
@@ -55,7 +53,6 @@ collections:
       This is where you list your products related to an activity
     folder: "content/products"
     slug: "{{title}}"
-    delete: false
     create: true
     format: 'json'
     fields:
