@@ -5,18 +5,17 @@
         <h2>{{ $store.state.settings.site }}</h2>
         <ul>
           <li><a>À propos de Luxaxes</a></li>
-          <li><a>Nos engagements</a></li>
           <li><a>Notre brochure</a></li>
+          <li><a>Foire a questions</a></li>
           <li><a>Service Après-Vente</a></li>
         </ul>
       </box>
       <box>
         <h2>Nos services</h2>
         <ul>
-          <li><a>PROPERTIES</a></li>
-          <li><a>FACILITIES</a></li>
-          <li><a>BUSINESS OPPORTUNITIES</a></li>
-          <li><a>BOUTIQUE</a></li>
+          <li v-for="{title,path} in $store.state.services" :key="title">
+            <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
+          </li>         
         </ul>
       </box>
       <box>
@@ -58,7 +57,7 @@
         </i> 2018 {{ $store.state.settings.site }} <span class="footer-bottom-rights"> - Tous droits reserves - </span>
       </div>
       <div class="footer-bottom-wrapper">
-        <a rel="nofollow">Conditions de vente</a> | <a rel="nofollow">Mentions légales</a>
+        <a >Conditions de vente</a> | <a >Nos engagements</a>
       </div>
     </section>
   </footer>

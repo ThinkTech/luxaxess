@@ -81,6 +81,23 @@ collections:
     fields:
       - {label: "Question", name: "title", widget: "string", tagname: "h1"}
       - {label: "Answer", name: "body", widget: "markdown"}
+
+  # site content
+  - name: "content management"
+    label: "Content management"
+    label_singular: "Content"
+    description: >
+      This is where you list your content management
+    folder: "content/cms"
+    slug: "{{title}}"
+    delete: false
+    create: true
+    format: 'json'
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Description", name: "description", widget: "text", tagname: "h2"}
+      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Content", name: "content", widget: "markdown"}
   
       # settings collection
   - name: "settings"

@@ -12,5 +12,11 @@ export default {
   },
   setServices(state, services) {
     state.services = services
+  },
+  setActivities(state, activities) {
+    state.activities = activities
+  },
+  setProducts(state, products) {
+    state.products = products
   }
 }

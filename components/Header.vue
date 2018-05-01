@@ -10,10 +10,9 @@
         <nav class="nav">
           <ul>
             <li><nuxt-link to="/">Accueil</nuxt-link></li>
-            <li><a>Properties</a></li>
-            <li><a>Facilities</a></li>
-            <li><a>Business opportunities</a></li>
-            <li><a>Boutique</a></li>
+            <li v-for="{title,path} in $store.state.services" :key="title">
+              <nuxt-link :to="path">{{ title }}</nuxt-link>
+            </li>            
             <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
         </nav>      
