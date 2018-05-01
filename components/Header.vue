@@ -53,7 +53,7 @@ header {
 nav {
   position: fixed;
   text-align: center;
-  right: -100%;
+  right: -105%;
   top: 0;
   height: 100%;
   width: 250px;
@@ -107,7 +107,7 @@ nav ul li a:hover {
 }
 
 #nav-toggle:checked ~ nav {
-  transform: translate3d(-95vw, 0, 0);
+  transform: translate3d(-100vw, 0, 0);
   box-shadow: -55px 13px 77px 90vw rgba(0, 0, 0, 0.47);
 }
 
