@@ -4,55 +4,7 @@
     <article>
       <h1 class="headline">{{ title }}</h1>
       <p>{{ content }}</p>
-    </article>
-    <section class="cards full">
-      <grid :col="$mq | mq({phone: 1, tablet: 2, pad:4})" gap="1.625em">
-        <box class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
-            <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
-            </box>
-            <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
-            </box>
-          </grid>
-        </box>
-        <box class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
-            <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
-            </box>
-            <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
-            </box>
-          </grid>
-        </box>
-        <box class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
-            <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
-            </box>
-            <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
-            </box>
-          </grid>
-        </box>
-        <box class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
-            <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
-            </box>
-            <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Decouvrir</a>
-            </box>
-          </grid>
-        </box>
-      </grid>
-    </section>
+    </article>    
   </main>  
 </template>
 

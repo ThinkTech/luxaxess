@@ -114,9 +114,10 @@
       </box>
       <box class="promo-content">
         <h1 class="headline">{{ $store.state.services[0].title }}</h1>
-        <h2 class="subhead">MOBILIER</h2>
-        <h2 class="subhead">INTERIEUR</h2>
         <p class="content">{{ $store.state.services[0].description }}</p>
+        <h2 v-for="({title, path}) in relatedActivities($store.state.services[0].title)" :key="title" class="subhead">
+          <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
+        </h2>        
         <nuxt-link :to="$store.state.services[0].path" class="product-button">Commander</nuxt-link>
       </box>
     </grid>
@@ -135,6 +136,13 @@
 import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'index',
+  methods: {
+    relatedActivities: function(relatedService) {
+      return this.$store.state.activities.filter(
+        ({ service }) => service === relatedService
+      )
+    }
+  },
   components: {
     Grid,
     Box
