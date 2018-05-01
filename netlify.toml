@@ -16,4 +16,5 @@
 [[headers]]
   for = "/admin"
   [headers.values]
+    Cache-Control = "private, no-cache, no-store, must-revalidate"
     script = "<https://identity.netlify.com/v1/netlify-identity-widget.js> async defer"
