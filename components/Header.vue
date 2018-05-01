@@ -53,7 +53,7 @@ header {
 nav {
   position: fixed;
   text-align: center;
-  right: -105%;
+  right: -100vw;
   top: 0;
   height: 100%;
   width: 250px;
