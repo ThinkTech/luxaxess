@@ -78,7 +78,7 @@
         </div>
       </div> 
     </section>
-    <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full" v-if="$store.state.services.length > 0">
+    <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full" v-if="$store.state.services.length">
       <box>
         <img :src="$store.state.services[0].image" :alt="$store.state.services[0].title" />
       </box>
@@ -91,7 +91,7 @@
         <nuxt-link :to="$store.state.services[0].path" class="product-button">Commander</nuxt-link>
       </box>
     </grid>
-    <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full" v-if="$store.state.services.length > 0">
+    <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full" v-if="$store.state.services.length">
       <box v-for="({title, path, image}, index) in $store.state.services" :key="title" v-if="index > 0">
         <img :src="image" :alt="title" />
         <h1 class="subhead">
@@ -197,19 +197,6 @@ export default {
   object-fit: cover;
   clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
 }
-.promo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.promo-content {
-  padding: 3.25em 0.8125em;
-  text-align: center;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 blockquote {
   font: 1.1em/2 'Aleo', serif;
   font-style: italic;
@@ -250,22 +237,6 @@ blockquote {
   font: bold 4em/1 'Aleo', serif;
   margin: 0 0 20px 0;
   position: relative;
-}
-
-.button {
-  display: inline-block;
-  color: white;
-  background: #222;
-  padding: 0.40625em 0.8125em;
-  width: 100%;
-  text-align: center;
-  margin: 1.625em auto;
-  border: 4px solid #444;
-  font-family: 'Aleo';
-}
-
-.button:hover {
-  background: black;
 }
 
 /* grid */

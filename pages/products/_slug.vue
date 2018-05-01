@@ -10,10 +10,34 @@
         .replace(/&nbsp;/gi, ' ') }}</h2>
       <h3>{{ description }}</h3>
       <p>{{ content }}</p>
-      <div class="actions">
-        <a class="button" href="/contact">Passez votre commande →</a>
-      </div>      
+      <img :src="image" :alt="title" />         
     </article>
+    <grid :col="$mq | mq({phone: 1, pad: images.length})" class="promo full" v-if="images.length">
+      <box v-for="({image}, index) in images" :key="image">
+        <img :src="image" :alt="`${title}-${index+1}`" />
+      </box>
+    </grid>
+    <div class="actions">
+      <a class="button" href="/contact">Passez votre commande →</a>
+    </div>
+    <h3 class="subhead" v-if="getRelatedProducts().length">VOUS AIMEREZ AUSSI</h3>
+    <section class="cards full" v-if="getRelatedProducts().length">
+      <grid :col="$mq | mq({phone: 1, tablet: 2, pad:4})" gap="1.625em">
+        <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
+          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
+            <box>
+              <img :src="path" :alt="title" class="products-image-box" />
+            </box>
+            <box class="product">             
+              <h2>{{ title }}</h2>
+              <h3 class="price">{{ price | currency }}</h3>
+              <p>{{ description }}</p>
+              <nuxt-link :to="path" class="product-button">Commander</nuxt-link>
+            </box>
+          </grid>
+        </box>        
+      </grid>
+    </section>
   </main>  
 </template>
 
@@ -38,6 +62,13 @@ export default {
   async asyncData({ params }) {
     const product = await import('~/content/products/' + params.slug + '.json')
     return product
+  },
+  methods: {
+    getRelatedProducts: function() {
+      return this.$store.state.products
+        .filter(({ title }) => title !== this.title)
+        .slice(3)
+    }
   },
   components: {
     Grid,
