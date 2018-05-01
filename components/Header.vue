@@ -41,6 +41,7 @@ header {
   top: 0.40625em;
   right: 0;
   display: inline-block;
+  z-index: 99999999;
 }
 
 #nav-toggle {
@@ -59,6 +60,7 @@ nav {
   background-color: #111;
   transition: 0.53s transform;
   transition-timing-function: cubic-bezier(0.38, 0.52, 0.37, 1);
+  z-index: 9999999999999;
 }
 nav ul {
   display: flex;
