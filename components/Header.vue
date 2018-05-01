@@ -44,7 +44,7 @@ header {
 .subhead {
   position: absolute;
   bottom: -0.25em;
-  left: 0.625em;
+  left: 0.40625em;
   font-size: 110%;
 }
 .menu {
