@@ -42,7 +42,7 @@
         </grid>
       </box>
       <box>
-        <img src="~/assets/images/b1.jpg" alt="" class="products-image-box tall" />
+        <img :src="getCoverActivity().image" :alt="getCoverActivity().title" class="products-image-box tall" />
       </box>
     </grid>
     <section class="cards full">
@@ -145,6 +145,11 @@ export default {
     getCoverProduct: function() {
       return this.$store.state.products.find(
         ({ title }) => title === this.$store.state.settings.product
+      )
+    },
+    getCoverActivity: function() {
+      return this.$store.state.activities.find(
+        ({ title }) => title === this.getCoverProduct().activity
       )
     }
   },
