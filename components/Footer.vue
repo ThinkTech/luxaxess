@@ -6,17 +6,17 @@
         <ul>
           <li><a>À propos de Luxaxes</a></li>
           <li><a>Nos engagements</a></li>
-          <li><a>Consultez notre brochure</a></li>
+          <li><a>Notre brochure</a></li>
           <li><a>Service Après-Vente</a></li>
         </ul>
       </box>
       <box>
         <h2>Nos services</h2>
         <ul>
-          <li><a>DECORATION</a></li>
-          <li><a>IMMOBILIER</a></li>
-          <li><a>VEHICULES</a></li>
-          <li><a>ACCESSOIRES</a></li>
+          <li><a>PROPERTIES</a></li>
+          <li><a>FACILITIES</a></li>
+          <li><a>BUSINESS OPPORTUNITIES</a></li>
+          <li><a>BOUTIQUE</a></li>
         </ul>
       </box>
       <box>

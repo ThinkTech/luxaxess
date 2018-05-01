@@ -1,8 +1,9 @@
 <template>
   <header class="container">
     <nuxt-link to="/" class="logo">
-      <h1>Luxaxes</h1>
+      <h1>LUXAXES</h1>
     </nuxt-link>
+    <h2 class="subhead">Le luxe accessible</h2>
     <div class="menu">
         <input type="checkbox" id="nav-toggle">
         <label for="nav-toggle"><span class="toggle">☰</span></label>       
@@ -33,7 +34,7 @@ header {
 }
 .logo h1 {
   margin: 0;
-  padding: 0.203125em 0;
+  padding: 0;
   display: inline-flex;
 }
 .menu {
@@ -87,7 +88,7 @@ nav ul li a:hover {
   font-size: 200%;
   font-weight: 900;
   background: #000;
-  padding: 0.203125em 0.40625em;
+  padding: 0 0.40625em;
   line-height: 1.3125em;
   cursor: pointer;
 }
@@ -116,10 +117,16 @@ nav ul li a:hover {
     padding: 0;
     justify-content: flex-end;
   }
-  .logo h1 {
+  .logo {
     position: absolute;
     top: 0;
     left: 0.8125em;
+  }
+  .subhead {
+    position: absolute;
+    bottom: -0.25em;
+    left: 1.125em;
+    font-size: 110%;
   }
   .menu {
     position: static;
