@@ -79,11 +79,10 @@ collections:
       This is where you list manage your site content
     slug: "{{title}}"
     delete: false
-    create: true
     files:
       - name: "about"
         label: "About Luxaxes"
-        file: "cms/about.json"
+        file: "content/cms/about.json"
         description: "About page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -92,7 +91,7 @@ collections:
           - {label: "Content", name: "content", widget: "markdown"}
       - name: "brochure"
         label: "Our brochure"
-        file: "cms/brochure.json"
+        file: "content/cms/brochure.json"
         description: "Brochure page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -103,14 +102,14 @@ collections:
         label: "FAQ"
         description: >
           This is where you list frequent questions from your customers
-        file: "cms/faq.json"
+        file: "content/cms/faq.json"
         create: true
         fields:
           - {label: "Question", name: "title", widget: "string", tagname: "h1"}
           - {label: "Answer", name: "body", widget: "markdown"}
       - name: "sav"
         label: "SAV"
-        file: "cms/sav.json"
+        file: "content/cms/sav.json"
         description: "SAV page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -119,7 +118,7 @@ collections:
           - {label: "Content", name: "content", widget: "markdown"}
       - name: "conditions"
         label: "Conditions"
-        file: "cms/conditions.json"
+        file: "content/cms/conditions.json"
         description: "Sale Conditions page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -128,7 +127,7 @@ collections:
           - {label: "Content", name: "content", widget: "markdown"}
       - name: "termes"
         label: "Terms"
-        file: "cms/terms.json"
+        file: "content/cms/terms.json"
         description: "Terms page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
@@ -144,7 +143,6 @@ collections:
     delete: false
     editor:
       preview: false
-    create: true
     files:
       - name: "settings"
         label: "Business Settings"
