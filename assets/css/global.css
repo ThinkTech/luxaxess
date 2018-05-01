@@ -35,6 +35,7 @@ body {
   font-family: 'Clear Sans';
   background: black;
   color: white;
+  overflow-x: hidden;
 }
 
 fieldset {
