@@ -28,16 +28,16 @@
         </agile>
       </no-ssr>
     </div>
-     <grid :col="$mq | mq({phone: 1, laptop: 2})" class="products full">
+     <grid :col="$mq | mq({phone: 1, laptop: 2})" class="products full" v-if="getCoverProduct()">
       <box>
         <grid :col="$mq | mq({phone: 1, laptop: 2})">
           <box>
-            <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
+            <img :src="getCoverProduct().image" :alt="getCoverProduct().title" class="products-image-box" />
           </box>
           <box class="product">
-            <h1>Adipiscing elit sed do eiusmod tempor</h1>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Sed ut perspiciatis unde doloremque laudantium.</p>          
-            <a class="product-button">Commander</a>
+            <h1>{{ getCoverProduct().title }}</h1>
+            <p>{{ getCoverProduct().description }}</p>          
+            <nuxt-link :to="getCoverProduct().path" class="product-button">Commander</nuxt-link>
           </box>
         </grid>
       </box>
@@ -140,6 +140,11 @@ export default {
     relatedActivities: function(relatedService) {
       return this.$store.state.activities.filter(
         ({ service }) => service === relatedService
+      )
+    },
+    getCoverProduct: function() {
+      return this.$store.state.products.find(
+        ({ title }) => title === this.$store.state.settings.product
       )
     }
   },

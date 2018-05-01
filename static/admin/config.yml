@@ -153,3 +153,9 @@ collections:
           - {label: "Tel", name: "tel", widget: "string"}
           - {label: "Cover Image", name: "image", widget: "image"}
           - {label: "Cover Text", name: "content", widget: "string"}
+          - label: "Cover product"
+            name: "product"
+            widget: "relation"
+            collection: "product"
+            searchFields: ["title", "activity"]
+            valueField: "title"
