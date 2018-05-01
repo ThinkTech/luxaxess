@@ -27,7 +27,6 @@ header {
   position: fixed;
   position: sticky;
   top: 0;
-  width: 100vw;
   background: black;
   z-index: 99999;
   box-shadow: 0.1em 0.08125em 1px #1d1b1b;
