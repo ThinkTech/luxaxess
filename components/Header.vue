@@ -24,8 +24,11 @@
 
 <style scoped>
 header {
+  position: fixed;
   position: sticky;
   top: 0;
+  left: 0;
+  width: 100vw;
   background: black;
   z-index: 99999;
   box-shadow: 0.1em 0.08125em 1px #1d1b1b;
@@ -98,7 +101,7 @@ nav ul li a:hover {
   font-size: 200%;
   font-weight: 900;
   background: #000;
-  padding: 0 0.40625em;
+  padding: 0;
   line-height: 1.3125em;
   cursor: pointer;
 }
