@@ -47,7 +47,7 @@
 .agile__list,
 .agile__track,
 .agile__slide {
-  height: 78vh;
+  height: 84vh;
 }
 
 @media (min-width: 960px) {
