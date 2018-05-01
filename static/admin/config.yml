@@ -68,9 +68,10 @@ collections:
       - {label: "Cover Image", name: "image", widget: "image"}      
       - label: "Additional images"
         name: "images"
+        required: false
         widget: "list"
         fields:
-          - {label: "Image", name: "image", widget: "image", required: false}
+          - {label: "Image", name: "image", widget: "image"}
       - {label: "Price", name: "price", widget: "number"}   
   
   # cms collection
