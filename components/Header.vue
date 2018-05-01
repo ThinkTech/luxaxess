@@ -24,7 +24,6 @@
 
 <style scoped>
 header {
-  position: fixed;
   position: sticky;
   top: 0;
   background: black;
