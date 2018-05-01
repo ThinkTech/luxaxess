@@ -63,10 +63,15 @@ collections:
         searchFields: ["title", "description"]
         valueField: "title"
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Description", name: "description", widget: "text", tagname: "h2"}
-      - {label: "Cover Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text", tagname: "h2"}      
       - {label: "Content", name: "content", widget: "markdown"}
-      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Cover Image", name: "image", widget: "image"}      
+      - label: "Additional images"
+        name: "images"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Price", name: "price", widget: "number"}   
   
   # cms collection
   - name: "cms"

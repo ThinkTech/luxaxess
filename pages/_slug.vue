@@ -36,9 +36,3 @@ export default {
   }
 }
 </script>
-
-<style>
-article {
-  padding: 1.625em 0.8125em;
-}
-</style>

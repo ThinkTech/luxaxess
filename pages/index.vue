@@ -36,6 +36,7 @@
           </box>
           <box class="product">
             <h1>{{ getCoverProduct().title }}</h1>
+            <h2 class="price">{{ getCoverProduct().price | currency }}</h2>
             <p>{{ getCoverProduct().description }}</p>          
             <nuxt-link :to="getCoverProduct().path" class="product-button">Commander</nuxt-link>
           </box>
@@ -45,52 +46,21 @@
         <img :src="getCoverActivity().image" :alt="getCoverActivity().title" class="products-image-box tall" />
       </box>
     </grid>
-    <section class="cards full">
+    <section class="cards full" v-if="getFeaturedProducts().length === 4">
       <grid :col="$mq | mq({phone: 1, tablet: 2, pad:4})" gap="1.625em">
-        <box class="card">
+        <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
+              <img :src="path" :alt="title" class="products-image-box" />
             </box>
             <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Commander</a>
+              <h2>{{ title }}</h2>
+              <h3 class="price">{{ price | currency }}</h3>
+              <p>{{ description }}</p>
+              <nuxt-link :to="path" class="product-button">Commander</nuxt-link>
             </box>
           </grid>
-        </box>
-        <box class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
-            <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
-            </box>
-            <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Commander</a>
-            </box>
-          </grid>
-        </box>
-        <box class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
-            <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
-            </box>
-            <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Commander</a>
-            </box>
-          </grid>
-        </box>
-        <box class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
-            <box>
-              <img src="~/assets/images/interior.jpg" alt="" class="products-image-box" />
-            </box>
-            <box class="product">             
-              <h2>Adipiscing elit sed do eiusmod tempor</h2>
-              <a class="product-button">Commander</a>
-            </box>
-          </grid>
-        </box>
+        </box>        
       </grid>
     </section>
     <section class="grid1">
@@ -104,7 +74,7 @@
         <div class="cta">
           <h1>Luxaxes</h1>
           <p>Vous avez craqué sur notre collection Accessoire Salle de Bain ? Voilà exactement la deco design qu’il vous faut pour moderniser votre foyer.</p>
-          <a class="button" href="">Passez votre commande →</a>
+          <a class="button" href="/contact">Passez votre commande →</a>
         </div>
       </div> 
     </section>
@@ -151,6 +121,21 @@ export default {
       return this.$store.state.activities.find(
         ({ title }) => title === this.getCoverProduct().activity
       )
+    },
+    getFeaturedProducts: function() {
+      return this.$store.state.products
+        .filter(({ title }) => title !== this.getCoverProduct().title)
+        .slice(3)
+    }
+  },
+  filters: {
+    currency: function(price) {
+      return Intl.NumberFormat('fr', {
+        style: 'currency',
+        currency: 'XOF'
+      })
+        .format(price)
+        .replace(/&nbsp;/gi, ' ')
     }
   },
   components: {

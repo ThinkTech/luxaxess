@@ -119,8 +119,6 @@ input[type='submit'] {
 * Global style
 */
 
-/* bungee-shade-400normal - latin */
-
 @font-face {
   font-family: 'Shadows Into Light';
   font-style: normal;
@@ -160,6 +158,12 @@ h3 {
 
 p {
   margin-bottom: 0.8125em;
+}
+
+article {
+  max-width: 56em;
+  padding: 1.625em 0.8125em;
+  margin: 1.625em auto;
 }
 
 main {
@@ -240,6 +244,11 @@ main {
   height: 16.25em;
   width: 100%;
   object-fit: cover;
+}
+
+.price {
+  font-family: 'Aleo';
+  color: #ea1d35;
 }
 
 /* Device Types with responsive typography*/
