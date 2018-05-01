@@ -219,11 +219,12 @@ main {
   padding: 0.40625em 1.625em;
   margin-top: 3.25em;
   font-weight: 900;
+  font-family: 'Aleo';
 }
 
 .product a:hover {
-  color: #d1619c;
-  background: white;
+  background: #000;
+  border: 1px solid #444;
 }
 
 .services {

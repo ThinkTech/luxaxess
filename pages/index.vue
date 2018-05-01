@@ -258,6 +258,7 @@ blockquote {
   text-align: center;
   margin: 1.625em auto;
   border: 4px solid #444;
+  font-family: 'Aleo';
 }
 
 .button:hover {

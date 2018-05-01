@@ -29,7 +29,7 @@ header {
   z-index: 99999;
   box-shadow: 0.1em 0.08125em 1px #1d1b1b;
   display: flex;
-  padding: 0.8125em;
+  padding: 0.6125em 0.8125em;
 }
 .logo h1 {
   margin: 0;
@@ -68,7 +68,7 @@ nav ul {
   padding-top: 1.625em;
 }
 nav ul li {
-  padding: 0.8125em 1.625em;
+  padding: 0.8125em 1em;
   background: #111;
   border-bottom: 1px solid #000;
 }
@@ -114,9 +114,12 @@ nav ul li a:hover {
 @media (min-width: 960px) {
   header {
     padding: 0;
+    justify-content: flex-end;
   }
   .logo h1 {
-    margin: 0 10vw 0 1.625em;
+    position: absolute;
+    top: 0;
+    left: 0.8125em;
   }
   .menu {
     position: static;
@@ -135,6 +138,14 @@ nav ul li a:hover {
   nav ul {
     flex-direction: row;
     padding-top: 0;
+  }
+  nav ul li {
+    border-right: 1px solid #000;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    justify-content: center;
   }
 }
 </style>
