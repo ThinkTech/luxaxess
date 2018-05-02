@@ -30,7 +30,7 @@
         <h2>Contact</h2>
         <ul>
           <li>
-            <address class="footer-address" role="company address">{{ $store.state.settings.address }}</address>
+            <address class="footer-address">{{ $store.state.settings.address }}</address>
           </li>
           <li>{{ $store.state.settings.email }}</li>
           <li>{{ $store.state.settings.tel }}</li>
@@ -42,17 +42,17 @@
         RESTEZ <span class="footer-social-small">en</span> CONTACT
         </span>
         <span class="footer-social-overlap footer-social-icons-wrapper">
-        <a target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
-        <a target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-        <a target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-        <a target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-        <a target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-        <a target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+        <a target="_blank" rel="noopener noreferrer" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+        <a target="_blank" rel="noopener noreferrer" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+        <a target="_blank" rel="noopener noreferrer" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" rel="noopener noreferrer" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+        <a target="_blank" rel="noopener noreferrer" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+        <a target="_blank" rel="noopener noreferrer" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
         </span>
     </section>
     <section class="footer-bottom-section flex-rw">
       <div class="footer-bottom-wrapper">   
-        <i class="fa fa-copyright" role="copyright">        
+        <i class="fa fa-copyright">        
         </i> 2018 {{ $store.state.settings.site }} <span class="footer-bottom-rights"> - Tous droits reserves - </span>
       </div>
       <div class="footer-bottom-wrapper">

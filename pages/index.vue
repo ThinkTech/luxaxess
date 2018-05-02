@@ -5,7 +5,7 @@
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <grid :col="2" class="slide">            
             <box>
-              <img :src="$store.state.homeSettings.image" :alt="$store.state.homeSettings.site">
+              <img :src="$store.state.homeSettings.image" :alt="$store.state.settings.site">
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>

@@ -7,8 +7,6 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=7200, must-revalidate"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
 [[headers]]
   for = "/*"
   [headers.values]
