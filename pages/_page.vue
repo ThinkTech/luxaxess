@@ -27,7 +27,7 @@ export default {
     }
   },
   async asyncData({ params }) {
-    const service = await import('~/content/cms/' + params.slug + '.json')
+    const service = await import('~/content/cms/' + params.page + '.json')
     return service
   },
   components: {
