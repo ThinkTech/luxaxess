@@ -46,7 +46,7 @@ export default {
         content: 'Luxaxes all business center pour tous vos services.'
       },
       {
-        hid: 'og:title',
+        hid: 'ogTitle',
         name: 'og:title',
         property: 'og:title',
         content: 'All business center pour tous vos services.'

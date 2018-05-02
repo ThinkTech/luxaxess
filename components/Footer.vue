@@ -4,10 +4,9 @@
       <box>
         <h2>{{ $store.state.settings.site }}</h2>
         <ul>
-          <li><nuxt-link :to="$store.state.cmsPages.about.path">À propos de Luxaxes</nuxt-link></li>
-          <li><nuxt-link :to="$store.state.cmsPages.brochure.path">Notre brochure</nuxt-link></li>
-          <li><nuxt-link :to="$store.state.cmsPages.faq.path">Foire a questions</nuxt-link></li>
-          <li><nuxt-link :to="$store.state.cmsPages.sav.path">Service Après-Vente</nuxt-link></li>
+          <li v-for="({title,path}, index) in $store.state.cmsPages" :key="title" v-if="index < 4">
+            <nuxt-link :to="path">{{ title }}</nuxt-link>
+          </li>          
         </ul>
       </box>
       <box>
@@ -57,7 +56,9 @@
         </i> 2018 {{ $store.state.settings.site }} <span class="footer-bottom-rights"> - Tous droits reserves - </span>
       </div>
       <div class="footer-bottom-wrapper">
-        <nuxt-link :to="$store.state.cmsPages.conditions.path">Conditions de vente</nuxt-link> | <nuxt-link :to="$store.state.cmsPages.terms.path">Nos engagements</nuxt-link>
+        <nuxt-link :to="$store.state.cmsPages[$store.state.cmsPages.length - 2].path">{{ $store.state.cmsPages[$store.state.cmsPages.length-2].title }}</nuxt-link>
+         | 
+        <nuxt-link :to="$store.state.cmsPages[$store.state.cmsPages.length - 1].path">{{ $store.state.cmsPages[$store.state.cmsPages.length-1].title }}</nuxt-link>
       </div>
     </section>
   </footer>
@@ -66,6 +67,14 @@
 <script>
 import { Grid, Box } from '../components/GridBox'
 export default {
+  data() {
+    return {
+      cmsPages: this.$store.state.cmsPages.sort(
+        ({ position: position1 = 1 }, { position: position2 = 2 }) =>
+          position1 - position2
+      )
+    }
+  },
   components: {
     Grid,
     Box

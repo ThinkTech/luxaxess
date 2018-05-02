@@ -85,58 +85,67 @@ collections:
     files:
       - name: "about"
         label: "About Luxaxes"
-        file: "content/cms/about.json"
+        file: "content/cms/a-propos.json"
         description: "About page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
           - {label: "Description", name: "description", widget: "text", tagname: "h2"}
           - {label: "Cover Image", name: "image", widget: "image"}
           - {label: "Content", name: "content", widget: "markdown"}
+          - {label: "Position of the page", name: "position", widget: number}
       - name: "brochure"
         label: "Our brochure"
-        file: "content/cms/brochure.json"
+        file: "content/cms/notre-brochure.json"
         description: "Brochure page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
           - {label: "Description", name: "description", widget: "text", tagname: "h2"}
           - {label: "Cover Image", name: "image", widget: "image"}
           - {label: "Content", name: "content", widget: "markdown"}
+          - {label: "Position of the page", name: "position", widget: number}
       - name: "faq"
         label: "FAQ"
         description: >
           This is where you list frequent questions from your customers
-        file: "content/cms/faq.json"
+        file: "content/cms/foire-a-questions.json"
         create: true
         fields:
-          - {label: "Question", name: "title", widget: "string", tagname: "h1"}
-          - {label: "Answer", name: "body", widget: "markdown"}
+          - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+          - {label: "Description", name: "description", widget: "text", tagname: "h2"}
+          - {label: "Cover Image", name: "image", widget: "image"}
+          - {label: "Question", name: "question", widget: "string", tagname: "h1"}
+          - {label: "Answer", name: "answer", widget: "markdown"}
+          - {label: "Position of the page", name: "position", widget: number}
       - name: "sav"
         label: "SAV"
-        file: "content/cms/sav.json"
+        file: "content/cms/service-apres-vente.json"
         description: "SAV page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
           - {label: "Description", name: "description", widget: "text", tagname: "h2"}
           - {label: "Cover Image", name: "image", widget: "image"}
           - {label: "Content", name: "content", widget: "markdown"}
+          - {label: "Position of the page", name: "position", widget: number}
       - name: "conditions"
         label: "Conditions"
-        file: "content/cms/conditions.json"
+        file: "content/cms/conditions-de-vente.json"
         description: "Sale Conditions page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
           - {label: "Description", name: "description", widget: "text", tagname: "h2"}
           - {label: "Cover Image", name: "image", widget: "image"}
           - {label: "Content", name: "content", widget: "markdown"}
+          - {label: "Position of the page", name: "position", widget: number}
       - name: "termes"
         label: "Terms"
-        file: "content/cms/terms.json"
+        file: "content/cms/nos-engaments.json"
         description: "Terms page"
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
           - {label: "Description", name: "description", widget: "text", tagname: "h2"}
           - {label: "Cover Image", name: "image", widget: "image"}
           - {label: "Content", name: "content", widget: "markdown"}
+          - {label: "Position of the page", name: "position", widget: number}
   
       # settings collection
   - name: "settings"
