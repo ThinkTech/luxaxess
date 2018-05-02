@@ -1,13 +1,12 @@
 import fs from 'fs'
-import glob from 'glob'
-import path from 'path'
 import settings from './content/settings.json'
 import util from 'util'
-const readdir = util.promisify(fs.readdir)
 
 const { title = 'Luxaxes' } = settings
 
-const getRoutes = async () => {
+const readdir = util.promisify(fs.readdir)
+
+const routes = async () => {
   const services = await readdir('content/services')
   const activities = await readdir('content/activities')
   const products = await readdir('content/products')
@@ -21,8 +20,6 @@ const getRoutes = async () => {
     ...cms.map(cms => `/${cms.replace('.json', '')}`)
   ]
 }
-
-console.log(getRoutes())
 
 export default {
   /*
@@ -69,7 +66,7 @@ export default {
   ** Route config for pre-rendering
   */
   generate: {
-    routes: getRoutes
+    routes
   },
   router: {
     scrollBehavior(to, from, savedPosition) {
