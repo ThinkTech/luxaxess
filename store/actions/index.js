@@ -11,13 +11,13 @@ export default {
     context = require.context('~/content/activities/', false, /\.json$/)
     const activities = context.keys().map(key => ({
       ...context(key),
-      path: `/activities/${key.replace('.json', '').replace('./', '')}`
+      path: `/activites/${key.replace('.json', '').replace('./', '')}`
     }))
     commit('setActivities', activities)
     context = require.context('~/content/products/', false, /\.json$/)
     const products = context.keys().map(key => ({
       ...context(key),
-      path: `/products/${key.replace('.json', '').replace('./', '')}`
+      path: `/produits/${key.replace('.json', '').replace('./', '')}`
     }))
     commit('setProducts', products)
     context = require.context('~/content/cms/', false, /\.json$/)

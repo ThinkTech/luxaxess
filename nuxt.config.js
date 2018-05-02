@@ -14,9 +14,9 @@ const routes = async () => {
   return [
     ...services.map(service => `/services/${service.replace('.json', '')}`),
     ...activities.map(
-      activity => `/activities/${activity.replace('.json', '')}`
+      activity => `/activites/${activity.replace('.json', '')}`
     ),
-    ...products.map(product => `/products/${product.replace('.json', '')}`),
+    ...products.map(product => `/produits/${product.replace('.json', '')}`),
     ...cms.map(cms => `/${cms.replace('.json', '')}`)
   ]
 }
