@@ -1,8 +1,12 @@
 {
   "title": "Foire a questions",
-  "description": "Boutique",
+  "description": "Foire a questions",
   "image": "/images/uploads/breather-187923-unsplash.jpg",
-  "question": "Question",
-  "answer": "Answer",
+  "faqs": [
+    {
+      "question": "Question",
+      "answer": "Answer"
+    }
+  ],
   "position": "3"
 }
