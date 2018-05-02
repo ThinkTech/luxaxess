@@ -2,8 +2,8 @@
   <header class="container">
     <nuxt-link to="/" class="logo">
       <h1>LUX<span class="logo-span">A</span>XES</h1>
-    </nuxt-link>
-    <h2 class="subhead">Le luxe accessible</h2>
+      <h2 class="subhead">Le luxe accessible</h2>
+    </nuxt-link>    
     <div class="menu">
         <input type="checkbox" id="nav-toggle">
         <label for="nav-toggle"><span class="toggle">☰</span></label>       
@@ -44,10 +44,10 @@ header {
   color: #ea1d35;
 }
 .subhead {
-  position: absolute;
-  bottom: -0.25em;
-  left: 0.40625em;
-  font-size: 110%;
+  position: relative;
+  bottom: 0.36125em;
+  left: -0.36125em;
+  font-size: 120%;
 }
 .menu {
   position: absolute;

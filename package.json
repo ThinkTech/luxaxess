@@ -14,7 +14,7 @@
     "precommit": "cross-env PRE_COMMIT=true lint-staged"
   },
   "lint-staged": {
-    "src/**/*.{js,css}": [
+    "src/**/*.{js,vue,css}": [
       "eslint --fix --ignore-path .gitignore src",
       "git add"
     ]
