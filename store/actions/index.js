@@ -2,6 +2,10 @@ export default {
   async nuxtServerInit({ commit, state }) {
     const { default: settings } = await import('~/content/settings.json')
     commit('setSettings', settings)
+    const {
+      default: homeSettings
+    } = await import('~/content/home-settings.json')
+    commit('setHomeSettings', homeSettings)
     let context = require.context('~/content/services/', false, /\.json$/)
     const services = context.keys().map(file => ({
       ...context(file),

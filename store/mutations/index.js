@@ -10,6 +10,9 @@ export default {
   setSettings(state, settings) {
     state.settings = settings
   },
+  setHomeSettings(state, homeSettings) {
+    state.homeSettings = homeSettings
+  },
   setServices(state, services) {
     state.services = services
   },

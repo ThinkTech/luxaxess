@@ -21,9 +21,9 @@
         <h2>Horaires</h2>
         <ul>
           <li>LUNDI AU VENDREDI</li>
-          <li>08 h 00-17 h 00</li>
+          <li>{{ this.$store.state.settings.weekdays }}</li>
           <li>SAMEDI</li>
-          <li>09 h 00-15 h 00</li>
+          <li>{{ this.$store.state.settings.saturday }}</li>
         </ul>
       </box>
       <box>

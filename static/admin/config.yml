@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   repo: ThinkTechSN/luxaxess
   branch: master # Branch to update (optional; defaults to master)
 
@@ -112,10 +112,15 @@ collections:
         fields:
           - {label: "Title", name: "title", widget: "string", tagname: "h1"}
           - {label: "Description", name: "description", widget: "text", tagname: "h2"}
-          - {label: "Cover Image", name: "image", widget: "image"}
-          - {label: "Question", name: "question", widget: "string", tagname: "h1"}
-          - {label: "Answer", name: "answer", widget: "markdown"}
-          - {label: "Position of the page", name: "position", widget: number}
+          - {label: "Cover Image", name: "image", widget: "image"}          
+          - name: "faqs"
+            label: "Questions/Answers"
+            label_singular: "Question"
+            widget: "list"
+            fields:
+              - {label: "Question", name: "question", widget: "string", tagname: "h1"}
+              - {label: "Answer", name: "answer", widget: "markdown"}
+          - {label: "Position of the page", name: "position", widget: number}          
       - name: "sav"
         label: "SAV"
         file: "content/cms/service-apres-vente.json"
@@ -159,13 +164,20 @@ collections:
       - name: "settings"
         label: "Business Settings"
         file: "content/settings.json"
-        description: "Business Settings"
+        description: "This is where you manage your business Settings"
         fields:
           - {label: "Busines name", name: "site", widget: "string"}
           - {label: "Busines description", name: "description", widget: "string"}
           - {label: "Address", name: "address", widget: "string"}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Tel", name: "tel", widget: "string"}
+          - {label: "Weekdays job hours", name: "weekdays", widget: "string"}
+          - {label: "Saturday job hours", name: "saturday", widget: "string"}
+      - name: "home-settings"
+        label: "Homepage Settings"
+        file: "content/home-settings.json"
+        description: "This is where you manage the look of your homepage"
+        fields:
           - {label: "Cover Image", name: "image", widget: "image"}
           - {label: "Cover Text", name: "content", widget: "string"}
           - label: "Cover product"

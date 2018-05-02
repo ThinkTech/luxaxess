@@ -5,12 +5,12 @@
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <grid :col="2" class="slide">            
             <box>
-              <img :src="$store.state.settings.image" :alt="$store.state.settings.site">
+              <img :src="$store.state.homeSettings.image" :alt="$store.state.homeSettings.site">
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>
               <h2 class="subhead">Le luxe accessible</h2>
-              <p class="content">{{ $store.state.settings.content }}</p>
+              <p class="content">{{ $store.state.homeSettings.content }}</p>
               <nuxt-link to="/about" class="button" href="">Decouverte →</nuxt-link>
             </box>
           </grid>            
@@ -114,7 +114,7 @@ export default {
     },
     getCoverProduct: function() {
       return this.$store.state.products.find(
-        ({ title }) => title === this.$store.state.settings.product
+        ({ title }) => title === this.$store.state.homeSettings.product
       )
     },
     getCoverActivity: function() {

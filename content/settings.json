@@ -4,7 +4,6 @@
   "address": "Sacre coeur en face cite police, Dakar-Senegal",
   "email": "info@luxaxes.com",
   "tel": "+221 338237878",
-  "image": "/images/uploads/house.jpg",
-  "content": "All business center pour tous vos services. Bienvenue dans le monde du business.",
-  "product": "LEXUS RX 350"
+  "weekdays": "08 h 00-17 h 00",
+  "saturday": "09 h 00-15 h 00"
 }
