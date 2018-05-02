@@ -2,5 +2,7 @@
   "title": "Foire a questions",
   "description": "Boutique",
   "image": "/images/uploads/breather-187923-unsplash.jpg",
-  "content": "Boutique"
+  "question": "Question",
+  "answer": "Answer",
+  "position": "3"
 }
