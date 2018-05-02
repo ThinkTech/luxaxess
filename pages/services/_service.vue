@@ -27,10 +27,10 @@ export default {
     }
   },
   async asyncData({ params }) {
-    const activity = await import('~/content/activities/' +
-      params.slug +
+    const service = await import('~/content/services/' +
+      params.service +
       '.json')
-    return activity
+    return service
   },
   components: {
     Grid,

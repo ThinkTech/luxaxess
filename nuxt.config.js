@@ -1,23 +1,28 @@
+import fs from 'fs'
 import glob from 'glob'
 import path from 'path'
 import settings from './content/settings.json'
+import util from 'util'
+const readdir = util.promisify(fs.readdir)
 
 const { title = 'Luxaxes' } = settings
 
-const getDynamicPaths = urlFilepathTable =>
-  Object.keys(urlFilepathTable).map(url => {
-    var filepathGlob = urlFilepathTable[url]
-    return glob
-      .sync(filepathGlob, { cwd: 'content' })
-      .map(filepath => `/${url}/${path.basename(filepath, '.json')}`)
-  })
+const getRoutes = async () => {
+  const services = await readdir('content/services')
+  const activities = await readdir('content/activities')
+  const products = await readdir('content/products')
+  const cms = await readdir('content/cms')
+  return [
+    ...services.map(service => `/services/${service.replace('.json', '')}`),
+    ...activities.map(
+      activity => `/activities/${activity.replace('.json', '')}`
+    ),
+    ...products.map(product => `/products/${product.replace('.json', '')}`),
+    ...cms.map(cms => `/${cms.replace('.json', '')}`)
+  ]
+}
 
-const dynamicRoutes = getDynamicPaths({
-  '': '/cms/*.json',
-  '/services': '/services/*.json',
-  '/activities': '/activities/*.json',
-  '/products': '/products/*.json'
-})
+console.log(getRoutes())
 
 export default {
   /*
@@ -64,7 +69,7 @@ export default {
   ** Route config for pre-rendering
   */
   generate: {
-    routes: dynamicRoutes
+    routes: getRoutes
   },
   router: {
     scrollBehavior(to, from, savedPosition) {

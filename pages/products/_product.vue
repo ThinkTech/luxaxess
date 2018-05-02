@@ -60,7 +60,9 @@ export default {
     }
   },
   async asyncData({ params }) {
-    const product = await import('~/content/products/' + params.slug + '.json')
+    const product = await import('~/content/products/' +
+      params.product +
+      '.json')
     return product
   },
   methods: {
