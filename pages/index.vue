@@ -88,7 +88,7 @@
         <h2 v-for="({title, path}) in relatedActivities($store.state.services[0].title)" :key="title" class="subhead">
           <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
         </h2>        
-        <nuxt-link :to="$store.state.services[0].path" class="product-button">Commander</nuxt-link>
+        <nuxt-link :to="$store.state.services[0].path" class="product-button">Decouverte →</nuxt-link>
       </box>
     </grid>
     <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full" v-if="$store.state.services.length">
@@ -185,8 +185,9 @@ export default {
 @media (min-width: 520px) {
   /* tablet*/
   .slide .content {
-    max-width: 44vw;
+    max-width: 32vw;
     display: block;
+    font-size: 125%;
   }
 }
 .slide img {
