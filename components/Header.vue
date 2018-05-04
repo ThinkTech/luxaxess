@@ -91,14 +91,11 @@ nav ul li {
   background: #111;
   border-bottom: 1px solid #000;
 }
-nav ul li.active {
-  background: #ea1d35;
-}
 nav ul li a {
-  font-weight: 900;
+  font-weight: 300;
   color: white;
 }
-nav ul li li:not(.active) a:hover {
+nav ul li a:hover {
   color: #ea1d35;
 }
 #nav-toggle ~ label {
