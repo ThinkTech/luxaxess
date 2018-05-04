@@ -2,5 +2,6 @@
   "title": "Facilities",
   "description": "Life facilities",
   "image": "/images/uploads/interior.jpg",
-  "content": "Life facilities"
+  "content": "Life facilities",
+  "priority": 2
 }

@@ -1,6 +1,10 @@
+.slider {
+  background: #8d8a85;
+}
+
 .agile {
   grid-column: full;
-  background-image: linear-gradient(66deg, #9c640baa, #efc14eee 80%, #e68f024a);
+  background-image: linear-gradient(66deg, #887d6caa, #8a8270ee 80%, #524d474a);
 }
 
 .agile__dots {
@@ -33,10 +37,6 @@
 
 .agile__arrow {
   display: none;
-}
-
-.slider {
-  background: #b68434;
 }
 
 .slider,

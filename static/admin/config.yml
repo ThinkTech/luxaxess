@@ -22,6 +22,7 @@ collections:
       - {label: "Description", name: "description", widget: "text", tagname: "h2"}
       - {label: "Cover Image", name: "image", widget: "image"}
       - {label: "Content", name: "content", widget: "markdown"}
+      - {label: "Priority", name: "priority", widget: "number"}
 
   # activity collection
   - name: "activity"

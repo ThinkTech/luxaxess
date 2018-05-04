@@ -11,7 +11,13 @@ export default {
       ...context(file),
       path: `/services/${file.replace('.json', '').replace('./', '')}`
     }))
-    commit('setServices', services)
+    commit(
+      'setServices',
+      services.sort(
+        ({ priority: priority1 = 1 }, { priority: priority2 = 2 }) =>
+          priority1 - priority2
+      )
+    )
     context = require.context('~/content/activities/', false, /\.json$/)
     const activities = context.keys().map(file => ({
       ...context(file),

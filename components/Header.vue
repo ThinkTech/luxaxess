@@ -3,22 +3,27 @@
     <nuxt-link to="/" class="logo">
       <h1>LUX<span class="logo-span">A</span>XES</h1>
       <h2 class="subhead">Le luxe accessible</h2>
-    </nuxt-link>    
+    </nuxt-link>
     <div class="menu">
         <input type="checkbox" id="nav-toggle">
         <label for="nav-toggle"><span class="toggle">☰</span></label>       
         <nav class="nav">
           <ul>
-            <li><nuxt-link to="/">Accueil</nuxt-link></li>
+            <li>
+              <nuxt-link to="/">Accueil</nuxt-link>
+            </li>
             <li v-for="{title,path} in $store.state.services" :key="title">
               <nuxt-link :to="path">{{ title }}</nuxt-link>
             </li>            
-            <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+            <li>
+              <nuxt-link to="/contact">Contact</nuxt-link>
+            </li>
           </ul>
         </nav>      
     </div>
   </header>
 </template>
+
 
 
 <style scoped>
@@ -39,6 +44,7 @@ header {
   padding: 0;
   display: inline-flex;
   font-family: 'Clear sans', serif;
+  font-weight: 350;
 }
 .logo-span {
   color: #ea1d35;
@@ -85,11 +91,14 @@ nav ul li {
   background: #111;
   border-bottom: 1px solid #000;
 }
+nav ul li.active {
+  background: #ea1d35;
+}
 nav ul li a {
   font-weight: 900;
   color: white;
 }
-nav ul li a:hover {
+nav ul li li:not(.active) a:hover {
   color: #ea1d35;
 }
 #nav-toggle ~ label {
