@@ -132,6 +132,9 @@ export default {
     {
       src: '~/plugins/vue-mq',
       ssr: false
+    },
+    {
+      src: '~/plugins/vue-lazy-image'
     }
   ],
   /*
