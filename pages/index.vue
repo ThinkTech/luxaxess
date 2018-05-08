@@ -5,7 +5,7 @@
         <agile :speed="750" :timing="'linear'" :fade="true" :autoplay="true">
           <grid :col="2" class="slide">            
             <box>
-              <lazy-image :src="require(`~/static${$store.state.homeSettings.image}`)" :alt="$store.state.settings.site" src-placeholder="~assets/images/blur.jpg"/>
+              <lazy-image :src="require(`~/static${$store.state.homeSettings.image}`)" :alt="$store.state.settings.site" :src-placeholder="require('~/assets/images/blur.jpg')"/>
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>
@@ -14,9 +14,9 @@
               <nuxt-link to="/about" class="button" href="">Decouverte →</nuxt-link>
             </box>
           </grid>            
-          <grid :col="2" class="slide" v-for="{title, description, path, image} in $store.state.services" :key="title" src-placeholder="~assets/images/blur.jpg">            
+          <grid :col="2" class="slide" v-for="{title, description, path, image} in $store.state.services" :key="title" :src-placeholder="require('~/assets/images/blur.jpg')">            
             <box>
-              <lazy-image :src="require(`~/static${image}`)" :alt="title" src-placeholder="~assets/images/blur.jpg"/>
+              <lazy-image :src="require(`~/static${image}`)" :alt="title" :src-placeholder="require('~/assets/images/blur.jpg')"/>
             </box>                        
             <box class="slide-content">
               <h1 class="headline">LUX<span class="logo-span">A</span>XES</h1>
@@ -32,7 +32,7 @@
       <box>
         <grid :col="$mq | mq({phone: 1, laptop: 2})">
           <box>
-            <lazy-image :src="require(`~/static${getCoverProduct().image}`)" src-placeholder="~assets/images/blur.jpg" :alt="getCoverProduct().title" class="products-image-box" />
+            <lazy-image :src="require(`~/static${getCoverProduct().image}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="getCoverProduct().title" class="products-image-box" />
           </box>
           <box class="product">
             <h1>{{ getCoverProduct().title }}</h1>
@@ -43,7 +43,7 @@
         </grid>
       </box>
       <box>
-        <lazy-image :src="require(`~/static${getCoverActivity().image}`)" src-placeholder="~assets/images/blur.jpg" :alt="getCoverActivity().title" class="products-image-box tall" />
+        <lazy-image :src="require(`~/static${getCoverActivity().image}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="getCoverActivity().title" class="products-image-box tall" />
       </box>
     </grid>
     <section class="cards full" v-if="getFeaturedProducts().length === 4">
@@ -51,7 +51,7 @@
         <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <lazy-image :src="require(`~/static${path}`)" src-placeholder="~assets/images/blur.jpg" :alt="title" class="products-image-box" />
+              <lazy-image :src="require(`~/static${path}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="title" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>{{ title }}</h2>
@@ -80,7 +80,7 @@
     </section>
     <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full" v-if="$store.state.services.length">
       <box>
-        <lazy-image :src="require(`~/static${$store.state.services[0].image}`)" src-placeholder="~assets/images/blur.jpg" :alt="$store.state.services[0].title" />
+        <lazy-image :src="require(`~/static${$store.state.services[0].image}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="$store.state.services[0].title" />
       </box>
       <box class="promo-content">
         <h1 class="headline">{{ $store.state.services[0].title }}</h1>
@@ -93,7 +93,7 @@
     </grid>
     <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full" v-if="$store.state.services.length">
       <box v-for="({title, path, image}, index) in $store.state.services" :key="title" v-if="index > 0">
-        <lazy-image :src="require(`~/static${image}`)" src-placeholder="~assets/images/blur.jpg" :alt="title" />
+        <lazy-image :src="require(`~/static${image}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="title" />
         <h1 class="subhead">
           <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
         </h1>        

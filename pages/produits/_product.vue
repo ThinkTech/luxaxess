@@ -14,7 +14,7 @@
     </article>
     <grid :col="$mq | mq({phone: 1, pad: images.length})" class="promo full" v-if="images.length">
       <box v-for="({image}, index) in images" :key="image">
-        <lazy-image :src="require(`~/static${image}`)" src-placeholder="~assets/images/blur.jpg" :alt="`${title}-${index+1}`" />
+        <lazy-image :src="require(`~/static${image}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="`${title}-${index+1}`" />
       </box>
     </grid>
     <div class="actions">
@@ -26,7 +26,7 @@
         <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <lazy-image :src="require(`~/static${path}`)" src-placeholder="~assets/images/blur.jpg" :alt="title" class="products-image-box" />
+              <lazy-image :src="require(`~/static${path}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="title" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>{{ title }}</h2>

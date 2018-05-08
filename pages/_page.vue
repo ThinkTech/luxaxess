@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <lazy-image :src="require(`~/static${image}`)" src-placeholder="~assets/images/blur.jpg" :alt="title" class="banner full" />
+    <lazy-image :src="require(`~/static${image}`)" :src-placeholder="require('~/assets/images/blur.jpg')" :alt="title" class="banner full" />
     <article>
       <h1 class="headline">{{ title }}</h1>
       <p>{{ content }}</p>
