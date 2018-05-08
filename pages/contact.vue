@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <img src="~/assets/images/b1.jpg" alt="Contact" class="banner full" />
+    <lazy-image src="~/assets/images/b1.jpg" src-placeholder="~assets/images/blur.jpg" alt="Contact" class="banner full" />
     <form id="contact" action="" method="post">
       <h1>CONTACTEZ-NOUS</h1>
       <fieldset>
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import LazyImage from '~/components/Image/LazyImage.vue'
 import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'page',
@@ -38,7 +39,8 @@ export default {
   },
   components: {
     Grid,
-    Box
+    Box,
+    LazyImage
   }
 }
 </script>

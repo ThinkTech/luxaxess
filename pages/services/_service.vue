@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <img :src="require(`~/static${image}`)" :alt="title" class="banner full" />
+    <lazy-image :src="require(`~/static${image}`)" src-placeholder="~assets/images/blur.jpg" :alt="title" class="banner full" />
     <article>
       <h1 class="headline">{{ title }}</h1>
       <p>{{ content }}</p>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import LazyImage from '~/components/Image/LazyImage.vue'
 import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'page',
@@ -34,7 +35,8 @@ export default {
   },
   components: {
     Grid,
-    Box
+    Box,
+    LazyImage
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <img :src="require(`~/static${image}`)" :alt="title" class="banner full" />
+    <lazy-image :src="require(`~/static${image}`)" :alt="title" class="banner full" />
     <article>
       <h1 class="headline">{{ title }}</h1>
       <h2 class="price">{{ Intl.NumberFormat('fr', {
@@ -10,11 +10,11 @@
         .replace(/&nbsp;/gi, ' ') }}</h2>
       <h3>{{ description }}</h3>
       <p>{{ content }}</p>
-      <img :src="require(`~/static${image}`)" :alt="title" />         
+      <lazy-image :src="require(`~/static${image}`)" :alt="title" />         
     </article>
     <grid :col="$mq | mq({phone: 1, pad: images.length})" class="promo full" v-if="images.length">
       <box v-for="({image}, index) in images" :key="image">
-        <img :src="require(`~/static${image}`)" :alt="`${title}-${index+1}`" />
+        <lazy-image :src="require(`~/static${image}`)" src-placeholder="~assets/images/blur.jpg" :alt="`${title}-${index+1}`" />
       </box>
     </grid>
     <div class="actions">
@@ -26,7 +26,7 @@
         <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
           <grid :col="$mq | mq({phone: 1})" gap="1.625em">
             <box>
-              <img :src="require(`~/static${path}`)" :alt="title" class="products-image-box" />
+              <lazy-image :src="require(`~/static${path}`)" src-placeholder="~assets/images/blur.jpg" :alt="title" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>{{ title }}</h2>
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import LazyImage from '~/components/Image/LazyImage.vue'
 import { Grid, Box } from '~/components/GridBox'
 export default {
   layout: 'page',
@@ -74,7 +75,8 @@ export default {
   },
   components: {
     Grid,
-    Box
+    Box,
+    LazyImage
   }
 }
 </script>

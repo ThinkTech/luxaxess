@@ -1,18 +1,9 @@
 <template>
-  <div>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filter hidden">
-      <defs>
-        <filter id="blur">
-          <feGaussianBlur in="SourceGraphic" :stdDeviation="deviation" />
-        </filter>
-      </defs>
-    </svg>
-     <v-lazy-image
-      :src="src"
-      :src-placeholder="srcPlaceholder"
-      @load="animate"
-    ></v-lazy-image>
-  </div>
+  <v-lazy-image
+    :src="src"
+    :src-placeholder="srcPlaceholder"
+    @load="animate"
+  ></v-lazy-image>
 </template>
 
 <script>
@@ -34,6 +25,7 @@ export default {
   data: () => ({ rate: 1 }),
   computed: {
     deviation() {
+      console.log(this.rate)
       return this.blurLevel * this.rate
     }
   },
@@ -61,10 +53,5 @@ export default {
 <style scoped>
 .filter {
   display: none;
-}
-
-.v-lazy-image {
-  width: 100%;
-  filter: url(#blur);
 }
 </style>
