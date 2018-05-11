@@ -23,6 +23,12 @@ export default {
     image: Object
   },
   mounted() {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('img[data-src-set]').forEach(img => {
+        load(img)
+      })
+      return
+    }
     const observer = new IntersectionObserver(
       function(entries, observer) {
         entries.forEach(function(entry) {
