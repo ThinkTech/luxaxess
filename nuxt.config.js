@@ -160,7 +160,7 @@ export default {
         options: {
           sizes: [320, 600, 800, 1200],
           placeholder: true,
-          placeholderSize: 50,
+          placeholderSize: 16,
           quality: 60,
           adapter: require('responsive-loader/sharp')
         }
