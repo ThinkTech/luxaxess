@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <lazy-image :src="require('~/assets/images/b1.jpg')" :src-placeholder="require('~/assets/images/blur.jpg')" alt="Contact" class="banner full" />
+    <lazy-image :image="require('~/assets/images/b1.jpg')" alt="Contact" class="banner full" />
     <form id="contact" action="" method="post">
       <h1>CONTACTEZ-NOUS</h1>
       <fieldset>

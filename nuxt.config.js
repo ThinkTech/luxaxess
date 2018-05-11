@@ -38,7 +38,7 @@ export default {
       },
       {
         name: 'theme-color',
-        content: '#b68434'
+        content: '#222'
       },
       {
         hid: 'description',
@@ -132,9 +132,6 @@ export default {
     {
       src: '~/plugins/vue-mq',
       ssr: false
-    },
-    {
-      src: '~/plugins/vue-lazy-image'
     }
   ],
   /*
@@ -151,6 +148,27 @@ export default {
           exclude: /(node_modules)/
         })
       }
+      /*
+  ** Let responsive-loader handle jpgs and png
+  */
+      config.module.rules.find(
+        rule => rule.test.toString() === '/\\.(png|jpe?g|gif|svg)$/'
+      ).exclude = /\.(jpe?g|png)$/
+
+      /*
+  ** Configure responsive-loader
+  */
+      config.module.rules.push({
+        test: /\.(jpe?g|png)$/i,
+        loader: 'responsive-loader',
+        options: {
+          sizes: [320, 600, 800, 1200],
+          placeholder: true,
+          placeholderSize: 50,
+          quality: 60,
+          adapter: require('responsive-loader/sharp')
+        }
+      })
     }
   }
 }

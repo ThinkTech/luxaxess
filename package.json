@@ -23,7 +23,6 @@
     "nuxt": "npm:nuxt-edge",
     "typeface-aleo": "0.0.44",
     "typeface-clear-sans": "0.0.44",
-    "v-lazy-image": "^1.2.1",
     "vue-agile": "^0.3.7",
     "vue-mq": "^0.2.1"
   },
@@ -41,6 +40,8 @@
     "full-icu": "^1.2.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "responsive-loader": "^1.1.0",
+    "sharp": "^0.20.2"
   }
 }
