@@ -23,8 +23,7 @@
     "nuxt": "npm:nuxt-edge",
     "typeface-aleo": "0.0.44",
     "typeface-clear-sans": "0.0.44",
-    "vue-agile": "^0.3.7",
-    "vue-mq": "^0.2.1"
+    "vue-agile": "^0.3.7"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",

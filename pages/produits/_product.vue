@@ -12,7 +12,7 @@
       <p>{{ content }}</p>
       <lazy-image :image="require(`~/static${image}`)" :alt="title" />         
     </article>
-    <grid :col="$mq | mq({phone: 1, pad: images.length})" class="promo full" v-if="images.length">
+    <grid :col="{phone: 1, pad: images.length}" class="promo full" v-if="images.length">
       <box v-for="({image}, index) in images" :key="image">
         <lazy-image :image="require(`~/static${image}`)" :alt="`${title}-${index+1}`" />
       </box>
@@ -22,9 +22,9 @@
     </div>
     <h3 class="subhead" v-if="getRelatedProducts().length">VOUS AIMEREZ AUSSI</h3>
     <section class="cards full" v-if="getRelatedProducts().length">
-      <grid :col="$mq | mq({phone: 1, tablet: 2, pad:4})" gap="1.625em">
+      <grid :col="{phone: 1, tablet: 2, pad:4}" gap="1.625em">
         <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
+          <grid :col="1" gap="1.625em">
             <box>
               <lazy-image :image="require(`~/static${path}`)" :alt="title" class="products-image-box" />
             </box>

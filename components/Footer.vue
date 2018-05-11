@@ -1,6 +1,6 @@
 <template>
   <footer class="container">    
-    <grid :col="$mq | mq({ phone: 2, pad: 4 })" gap="3.25em">
+    <grid :col="{ phone: 2, pad: 4 }" gap="3.25em">
       <box>
         <h2>{{ $store.state.settings.site }}</h2>
         <ul>

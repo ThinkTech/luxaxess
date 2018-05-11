@@ -128,10 +128,6 @@ export default {
     {
       src: '~/plugins/vue-agile',
       ssr: false
-    },
-    {
-      src: '~/plugins/vue-mq',
-      ssr: false
     }
   ],
   /*

@@ -28,9 +28,9 @@
         </agile>
       </no-ssr>
     </div>
-     <grid :col="$mq | mq({phone: 1, laptop: 2})" class="products full" v-if="getCoverProduct()">
+     <grid :col="{phone: 1, laptop: 2}" class="products full" v-if="getCoverProduct()">
       <box>
-        <grid :col="$mq | mq({phone: 1, laptop: 2})">
+        <grid :col="{phone: 1, laptop: 2}">
           <box>
             <lazy-image :image="require(`~/static${getCoverProduct().image}`)" :alt="getCoverProduct().title" class="products-image-box" />
           </box>
@@ -47,9 +47,9 @@
       </box>
     </grid>
     <section class="cards full" v-if="getFeaturedProducts().length === 4">
-      <grid :col="$mq | mq({phone: 1, tablet: 2, pad:4})" gap="1.625em">
+      <grid :col="{phone: 1, tablet: 2, pad:4}" gap="1.625em">
         <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
-          <grid :col="$mq | mq({phone: 1})" gap="1.625em">
+          <grid :col="{phone: 1}" gap="1.625em">
             <box>
               <lazy-image :image="require(`~/static${path}`)" :alt="title" class="products-image-box" />
             </box>
@@ -78,7 +78,7 @@
         </div>
       </div> 
     </section>
-    <grid :col="$mq | mq({phone: 1, pad: 2})" class="promo full" v-if="$store.state.services.length">
+    <grid :col="{phone: 1, pad: 2}" class="promo full" v-if="$store.state.services.length">
       <box>
         <lazy-image :image="require(`~/static${$store.state.services[0].image}`)" :alt="$store.state.services[0].title" />
       </box>
@@ -91,7 +91,7 @@
         <nuxt-link :to="$store.state.services[0].path" class="product-button">Decouverte →</nuxt-link>
       </box>
     </grid>
-    <grid :col="$mq | mq({phone: 1, tablet:3})" gap="0em" class="services full" v-if="$store.state.services.length">
+    <grid :col="{phone: 1, tablet:3}" gap="0em" class="services full" v-if="$store.state.services.length">
       <box v-for="({title, path, image}, index) in $store.state.services" :key="title" v-if="index > 0">
         <lazy-image :image="require(`~/static${image}`)" :alt="title" />
         <h1 class="subhead">
