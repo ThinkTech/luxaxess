@@ -31,7 +31,7 @@
       </box>      
     </grid>        
     <h3 class="subhead" v-if="getRelatedProducts().length">VOUS AIMEREZ AUSSI</h3>
-    <section class="products" v-if="getRelatedProducts().length">
+    <section class="related-products" v-if="getRelatedProducts().length">
       <grid :col="{tablet: 2, pad:4}" gap="1.625em">
         <box v-for="({title, description, path}) in getRelatedProducts()" :key="title" class="card">
           <grid gap="1.625em" class="picture caption">
@@ -109,10 +109,10 @@ export default {
 .order {
   margin: 3.25em auto 1.625em;
 }
-.products {
+.related-products {
   margin-bottom: 1.625em;
 }
-.card {
+.related-products .card {
   background: #000;
 }
 </style>
