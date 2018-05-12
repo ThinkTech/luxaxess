@@ -5,7 +5,7 @@
       <h1 class="headline">{{ title }}</h1>
       <h2>{{ description }}</h2>
     </article>
-    <grid :col="{tablet:2, laptop: 4}" gap="1.625em" class="products">
+    <grid :col="{tablet:2, laptop: 4}" gap="1.625em" class="products-list">
       <box v-for="{title, description, path, image, price} in getProducts()" :key="title" class="picture caption zoomIn">                
       <nuxt-link :to="path">
         <lazy-image :image="require(`~/static${image}`)" :alt="title"/>        
@@ -72,8 +72,8 @@ export default {
 }
 </script>
 
-<style>
-.products {
+<style scoped>
+.products-list {
   padding-bottom: 3.25em;
 }
 </style>
