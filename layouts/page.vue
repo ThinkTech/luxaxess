@@ -3,11 +3,11 @@
     <site-header/>
     <nuxt/>
     <grid :col="{tablet:2, laptop:4}" gap="0em" class="services full">
-      <box v-for="{title, path, image} in $store.state.services" :key="title">
-        <lazy-image :image="require(`~/static${image}`)" :alt="title" />
-        <h1 class="subhead">
-          <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
-        </h1>        
+      <box v-for="{title, path, image} in $store.state.services" :key="title" class="picture sepia">                
+        <nuxt-link :to="path">
+          <lazy-image :image="require(`~/static${image}`)" :alt="title" />
+          <h1 class="subhead">{{ title.toUpperCase() }}</h1>
+        </nuxt-link>                
       </box>      
     </grid>
     <site-footer/>
