@@ -3,6 +3,7 @@
     <lazy-image :image="require(`~/static${image}`)" :alt="title" class="banner full" />
     <article>
       <h1 class="headline">{{ title }}</h1>
+      <h2>{{ description }}</h2>
       <p>{{ content }}</p>
     </article>
   </main>  

@@ -1,5 +1,6 @@
 <template>
   <img
+    ref="img"
     :src="image.placeholder"
     :data-src-set="image.srcSet"
   />
@@ -24,9 +25,7 @@ export default {
   },
   mounted() {
     if (!('IntersectionObserver' in window)) {
-      document.querySelectorAll('img[data-src-set]').forEach(img => {
-        load(img)
-      })
+      load(this.$refs.img)
       return
     }
     const observer = new IntersectionObserver(
@@ -43,9 +42,7 @@ export default {
         threshold: 0.3
       }
     )
-    document.querySelectorAll('img[data-src-set]').forEach(img => {
-      observer.observe(img)
-    })
+    observer.observe(this.$refs.img)
   }
 }
 </script>

@@ -2,7 +2,7 @@
   <div>
     <site-header/>
     <nuxt/>
-    <grid :col="{phone: 1, tablet:2, laptop:4}" gap="0em" class="services full">
+    <grid :col="{tablet:2, laptop:4}" gap="0em" class="services full">
       <box v-for="{title, path, image} in $store.state.services" :key="title">
         <lazy-image :image="require(`~/static${image}`)" :alt="title" />
         <h1 class="subhead">

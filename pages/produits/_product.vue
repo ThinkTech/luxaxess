@@ -1,30 +1,42 @@
 <template>
   <main class="container">
-    <lazy-image :image="require(`~/static${image}`)" :alt="title" class="banner full" />
-    <article>
-      <h1 class="headline">{{ title }}</h1>
-      <h2 class="price">{{ Intl.NumberFormat('fr', {
-        style: 'currency',
-        currency: 'XOF'
-      }).format(price)
-        .replace(/&nbsp;/gi, ' ') }}</h2>
-      <h3>{{ description }}</h3>
-      <p>{{ content }}</p>
-      <lazy-image :image="require(`~/static${image}`)" :alt="title" />         
-    </article>
-    <grid :col="{phone: 1, pad: images.length}" class="promo full" v-if="images.length">
-      <box v-for="({image}, index) in images" :key="image">
-        <lazy-image :image="require(`~/static${image}`)" :alt="`${title}-${index+1}`" />
+    <grid :col="{tablet:2}" gap="3.25em" class="detail">            
+      <box>
+        <no-ssr>
+          <agile :speed="300" timing="linear" :fade="true" :autoplay="true">
+            <lazy-image :image="require(`~/static${image}`)" :alt="title"/>
+            <template v-for="({image}, index) in images">
+              <lazy-image :image="require(`~/static${image}`)" :alt="`${title}-${index+1}`" :key="image"/>
+            </template>
+          </agile>
+        </no-ssr>
+      </box>                        
+      <box class="promo-content">
+        <h1 class="headline">{{ title }}</h1>
+        <h2 class="price">{{ Intl.NumberFormat('fr', {
+          style: 'currency',
+          currency: 'XOF'
+        }).format(price)
+          .replace(/&nbsp;/gi, ' ') }}</h2>
+        <h3>{{ description }}</h3>
+        <div class="actions">
+          <a class="button" href="/contact">COMMANDER</a>
+        </div>
       </box>
     </grid>
-    <div class="actions">
-      <a class="button" href="/contact">Passez votre commande →</a>
-    </div>
+    <grid gap="3.25em" class="full">            
+      <box>
+        <article>
+          <h3 class="subhead">DESCRIPTION</h3>  
+          <p>{{ content }}</p>
+        </article>
+      </box>      
+    </grid>        
     <h3 class="subhead" v-if="getRelatedProducts().length">VOUS AIMEREZ AUSSI</h3>
     <section class="cards full" v-if="getRelatedProducts().length">
-      <grid :col="{phone: 1, tablet: 2, pad:4}" gap="1.625em">
+      <grid :col="{tablet: 2, pad:4}" gap="1.625em">
         <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
-          <grid :col="1" gap="1.625em">
+          <grid gap="1.625em">
             <box>
               <lazy-image :image="require(`~/static${path}`)" :alt="title" class="products-image-box" />
             </box>
@@ -81,9 +93,15 @@ export default {
 }
 </script>
 
-<style scoped>
-.actions {
-  text-align: center;
+<style>
+.agile,
+.agile__list,
+.agile__track,
+.agile__slide {
+  height: 100% !important;
+}
+.detail {
+  padding-top: 1.625em;
 }
 .button {
   margin: 3.25em auto 1.625em;

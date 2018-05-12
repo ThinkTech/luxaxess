@@ -1,11 +1,11 @@
 <template>
   <div class="grid" :style="{
-    '--items-on-phone': col.phone || col,
-    '--items-on-tablet': col.tablet || col.phone || col,
-    '--items-on-pad': col.pad || col.tablet || col.phone || col,
-    '--items-on-laptop': col.laptop || col.pad || col.tablet || col.phone || col,
-    '--items-on-desktop': col.desktop || col.laptop || col.pad || col.tablet || col.phone || col,
-    '--items-on-large': col.large || col.desktop || col.laptop || col.pad || col.tablet || col.phone || col,
+    '--items-on-phone': col.phone || (typeof col === 'object' ? 1 : col),
+    '--items-on-tablet': col.tablet || col.phone || (typeof col === 'object' ? 1 : col),
+    '--items-on-pad': col.pad || col.tablet || col.phone || (typeof col === 'object' ? 1 : col),
+    '--items-on-laptop': col.laptop || col.pad || col.tablet || col.phone || (typeof col === 'object' ? 1 : col),
+    '--items-on-desktop': col.desktop || col.laptop || col.pad || col.tablet || col.phone || (typeof col === 'object' ? 1 : col),
+    '--items-on-large': col.large || col.desktop || col.laptop || col.pad || col.tablet || col.phone || (typeof col === 'object' ? 1 : col),
     '--grid-gap': gap
   }">
     <slot/>
