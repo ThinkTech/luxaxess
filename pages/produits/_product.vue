@@ -18,10 +18,8 @@
           currency: 'XOF'
         }).format(price)
           .replace(/&nbsp;/gi, ' ') }}</h2>
-        <h3>{{ description }}</h3>
-        <div class="actions">
-          <a class="button" href="/contact">COMMANDER</a>
-        </div>
+        <h3>{{ description }}</h3>        
+        <a class="order" href="/contact">COMMANDER</a>        
       </box>
     </grid>
     <grid gap="3.25em" class="full">            
@@ -103,7 +101,7 @@ export default {
 .detail {
   padding-top: 1.625em;
 }
-.button {
+.order {
   margin: 3.25em auto 1.625em;
 }
 </style>
