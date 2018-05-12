@@ -31,16 +31,21 @@
       </box>      
     </grid>        
     <h3 class="subhead" v-if="getRelatedProducts().length">VOUS AIMEREZ AUSSI</h3>
-    <section class="cards full" v-if="getRelatedProducts().length">
+    <section class="products" v-if="getRelatedProducts().length">
       <grid :col="{tablet: 2, pad:4}" gap="1.625em">
-        <box v-for="({title, description, path}) in getFeaturedProducts()" :key="title" class="card">
-          <grid gap="1.625em">
+        <box v-for="({title, description, path}) in getRelatedProducts()" :key="title" class="card">
+          <grid gap="1.625em" class="picture caption">
             <box>
-              <lazy-image :image="require(`~/static${path}`)" :alt="title" class="products-image-box" />
+              <lazy-image :image="require(`~/static${image}`)" :alt="title" class="products-image-box" />
             </box>
             <box class="product">             
               <h2>{{ title }}</h2>
-              <h3 class="price">{{ price | currency }}</h3>
+              <h3 class="price">{{ Intl.NumberFormat('fr', {
+                  style: 'currency',
+                  currency: 'XOF'
+                }).format(price)
+                  .replace(/&nbsp;/gi, ' ') }}
+              </h3>
               <p>{{ description }}</p>
               <nuxt-link :to="path" class="product-button">Commander</nuxt-link>
             </box>
@@ -80,7 +85,7 @@ export default {
     getRelatedProducts: function() {
       return this.$store.state.products
         .filter(({ title }) => title !== this.title)
-        .slice(3)
+        .slice(-4)
     }
   },
   components: {
@@ -103,5 +108,11 @@ export default {
 }
 .order {
   margin: 3.25em auto 1.625em;
+}
+.products {
+  margin-bottom: 1.625em;
+}
+.card {
+  background: #000;
 }
 </style>

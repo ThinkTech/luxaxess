@@ -5,8 +5,8 @@
       <h1 class="headline">{{ title }}</h1>
       <h2>{{ description }}</h2>
     </article>        
-    <grid :col="{tablet:2, laptop: getRelatedActivities().length}" gap="0em" class="services full">
-      <box v-for="{title, description, path, image} in getRelatedActivities()" :key="title" class="picture caption zoomIn">                
+    <grid :col="{tablet:2, laptop: getActivities().length}" gap="0em" class="services full">
+      <box v-for="{title, description, path, image} in getActivities()" :key="title" class="picture caption zoomIn">                
       <nuxt-link :to="path">
         <lazy-image :image="require(`~/static${image}`)" :alt="title"/>        
         <h1 class="text subhead">{{ title.toUpperCase() }}</h1>
@@ -49,7 +49,7 @@ export default {
     return service
   },
   methods: {
-    getRelatedActivities: function() {
+    getActivities: function() {
       return this.$store.state.activities.filter(
         ({ service }) => service === this.title
       )

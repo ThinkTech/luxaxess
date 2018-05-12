@@ -92,11 +92,11 @@
       </box>
     </grid>
     <grid :col="{tablet:3}" gap="0em" class="services full" v-if="$store.state.services.length">
-      <box v-for="({title, path, image}, index) in $store.state.services" :key="title" v-if="index > 0">
-        <lazy-image :image="require(`~/static${image}`)" :alt="title" />
-        <h1 class="subhead">
-          <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
-        </h1>        
+      <box v-for="({title, path, image}, index) in $store.state.services" :key="title" v-if="index > 0" class="picture sepia">
+        <nuxt-link :to="path">
+          <lazy-image :image="require(`~/static${image}`)" :alt="title" />
+          <h1 class="subhead">{{ title.toUpperCase() }}</h1>
+        </nuxt-link>
       </box>   
     </grid>
   </main>
