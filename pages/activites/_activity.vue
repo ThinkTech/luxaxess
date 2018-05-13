@@ -1,16 +1,19 @@
 <template>
   <main class="container">
     <lazy-image :image="require(`~/static${image}`)" :alt="title" class="banner full" />
-    <article>
-      <h1 class="headline">{{ title }}</h1>      
-    </article>
+    <h1 class="headline">{{ title }}</h1>      
     <grid :col="{tablet:2, laptop: 4}" gap="1.625em" class="products-list">
       <box v-for="{title, description, path, image, price} in getProducts()" :key="title" class="picture caption zoomIn">                
       <nuxt-link :to="path">
         <lazy-image :image="require(`~/static${image}`)" :alt="title"/>        
         <h1 class="text subhead">{{ title.toUpperCase() }}</h1>
-        <h2>{{ title.toUpperCase() }}</h2>                                  
-        <h3>{{ description }}</h3>                                  
+        <h2 class="subhead">{{ title.toUpperCase() }}</h2>                                  
+        <h3> {{ Intl.NumberFormat('fr', {
+              style: 'currency',
+              currency: 'XOF'
+            }).format(price)
+              .replace(/&nbsp;/gi, ' ') }}
+        </h3>                                  
         <div class = "details">
 				  <h3>LUXAXES</h3>
           <p class="price">
@@ -75,5 +78,14 @@ export default {
 <style scoped>
 .products-list {
   padding-bottom: 3.25em;
+}
+.products-list img {
+  margin-bottom: 0.8125em;
+}
+.headline {
+  padding: 0.8125em 0;
+}
+article {
+  background: #222;
 }
 </style>
