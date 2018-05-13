@@ -2,8 +2,7 @@
   <main class="container">
     <lazy-image :image="require(`~/static${image}`)" :alt="title" class="banner full" />
     <article>
-      <h1 class="headline">{{ title }}</h1>
-      <h2>{{ description }}</h2>
+      <h1 class="headline">{{ title }}</h1>      
     </article>
     <grid :col="{tablet:2, laptop: 4}" gap="1.625em" class="products-list">
       <box v-for="{title, description, path, image, price} in getProducts()" :key="title" class="picture caption zoomIn">                
@@ -27,6 +26,7 @@
       </box>      
     </grid>
     <article>      
+      <h2>{{ description }}</h2>
       <p>{{ content }}</p>
     </article>
   </main>  

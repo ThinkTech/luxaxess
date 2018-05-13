@@ -34,47 +34,6 @@ export default {
   }
 }
 @supports (display: grid) {
-  @media (min-width: 1px) {
-    /* Mobile*/
-    .grid {
-      --items-per-line: var(--items-on-phone);
-    }
-  }
-
-  @media (min-width: 520px) {
-    /* tablet*/
-    .grid {
-      --items-per-line: var(--items-on-tablet);
-    }
-  }
-
-  @media (min-width: 750px) {
-    /* pad*/
-    .grid {
-      --items-per-line: var(--items-on-pad);
-    }
-  }
-
-  @media (min-width: 960px) {
-    /* laptop*/
-    .grid {
-      --items-per-line: var(--items-on-laptop);
-    }
-  }
-
-  @media (min-width: 1280px) {
-    /* desktop*/
-    .grid {
-      --items-per-line: var(--items-on-desktop);
-    }
-  }
-
-  @media (min-width: 1920px) {
-    /* large screen*/
-    .grid {
-      --items-per-line: var(--items-on-large);
-    }
-  }
   .grid {
     display: grid;
     grid-template-columns: repeat(
@@ -83,6 +42,36 @@ export default {
     );
     grid-gap: var(--grid-gap);
     margin: initial;
+  }
+}
+@media (min-width: 1px) {
+  .grid {
+    --items-per-line: var(--items-on-phone);
+  }
+}
+@media (min-width: 520px) {
+  .grid {
+    --items-per-line: var(--items-on-tablet);
+  }
+}
+@media (min-width: 750px) {
+  .grid {
+    --items-per-line: var(--items-on-pad);
+  }
+}
+@media (min-width: 960px) {
+  .grid {
+    --items-per-line: var(--items-on-laptop);
+  }
+}
+@media (min-width: 1280px) {
+  .grid {
+    --items-per-line: var(--items-on-desktop);
+  }
+}
+@media (min-width: 1920px) {
+  .grid {
+    --items-per-line: var(--items-on-large);
   }
 }
 </style>

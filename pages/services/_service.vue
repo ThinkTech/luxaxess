@@ -2,8 +2,7 @@
   <main class="container">
     <lazy-image :image="require(`~/static${image}`)" :alt="title" class="banner full" />
     <article>      
-      <h1 class="headline">{{ title }}</h1>
-      <h2>{{ description }}</h2>
+      <h1 class="headline">{{ title }}</h1>      
     </article>        
     <grid :col="{tablet:2, laptop: getActivities().length}" gap="0em" class="services full">
       <box v-for="{title, description, path, image} in getActivities()" :key="title" class="picture caption zoomIn">                
@@ -17,7 +16,8 @@
       </nuxt-link>        
       </box>      
     </grid>
-    <article>      
+    <article>
+      <h2>{{ description }}</h2> 
       <p>{{ content }}</p>
     </article>   
   </main>  

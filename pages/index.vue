@@ -88,7 +88,6 @@
         <h2 v-for="({title, path}) in relatedActivities($store.state.services[0].title)" :key="title" class="subhead">
           <nuxt-link :to="path">{{ title.toUpperCase() }}</nuxt-link>
         </h2>        
-        <nuxt-link :to="$store.state.services[0].path" class="product-button">Decouverte →</nuxt-link>
       </box>
     </grid>
     <grid :col="{tablet:3}" gap="0em" class="services full" v-if="$store.state.services.length">
