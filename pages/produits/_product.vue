@@ -19,7 +19,7 @@
         }).format(price)
           .replace(/&nbsp;/gi, ' ') }}</h2>
         <h3>{{ description }}</h3>        
-        <a class="order button" href="/contact">COMMANDER</a>        
+        <nuxt-link to="/contact" class="order button">Commander</nuxt-link>
       </box>
     </grid>
     <grid gap="3.25em" class="full">            
