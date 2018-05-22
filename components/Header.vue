@@ -12,8 +12,14 @@
             <li>
               <nuxt-link to="/">Accueil</nuxt-link>
             </li>
-            <li v-for="{title,path} in $store.state.services" :key="title">
-              <nuxt-link :to="path">{{ title }}</nuxt-link>
+            <li v-for="{title:service,path} in $store.state.services" :key="service">
+              <nuxt-link :to="path">{{ service }}</nuxt-link>
+              <span>ˇ</span>
+              <ul>
+                <li v-for="{title:activity,path} in getActivities(service)" :key="activity">
+                  <nuxt-link :to="path">{{ activity }}</nuxt-link>
+                </li>
+              </ul>
             </li>            
             <li>
               <nuxt-link to="/contact">Contact</nuxt-link>
@@ -24,6 +30,17 @@
   </header>
 </template>
 
+<script>
+export default {
+  methods: {
+    getActivities: function(relatedService) {
+      return this.$store.state.activities.filter(
+        ({ service }) => service === relatedService
+      )
+    }
+  }
+}
+</script>
 
 
 <style scoped>
@@ -90,6 +107,22 @@ nav ul li {
   padding: 0.8125em 1em;
   background: #111;
   border-bottom: 1px solid #000;
+  position: relative;
+}
+nav ul li > span {
+  font-size: 265%;
+  line-height: 0;
+  position: relative;
+  top: 0.5em;
+  left: 0.08125em;
+}
+nav ul li > ul {
+  display: none;
+}
+nav ul li:hover > ul {
+  display: block;
+  padding: 0;
+  z-index: 99999999;
 }
 nav ul li a {
   font-weight: 300;
@@ -160,6 +193,11 @@ nav ul li a:hover {
   }
   nav ul li {
     border-right: 1px solid #000;
+  }
+  nav ul li:hover > ul {
+    position: absolute;
+    width: 16em;
+    left: 0;
   }
 }
 @media (min-width: 1024px) {
