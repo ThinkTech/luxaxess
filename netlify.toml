@@ -6,7 +6,7 @@
 [[headers]]
   for = "/*.html"
   [headers.values]
-    Cache-Control = "public, max-age=7200, must-revalidate"
+    Cache-Control = "public, max-age=720, must-revalidate"
 [[headers]]
   for = "/*"
   [headers.values]
