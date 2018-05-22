@@ -32,8 +32,8 @@
           <li>
             <address class="footer-address">{{ $store.state.settings.address }}</address>
           </li>
-          <li>{{ $store.state.settings.email }}</li>
-          <li>{{ $store.state.settings.tel }}</li>
+          <li><i class="icon-mail"/>{{ $store.state.settings.email }}</li>
+          <li><i class="icon-phone"/>{{ $store.state.settings.tel }}</li>
         </ul>
       </box>
     </grid>
@@ -42,12 +42,11 @@
         RESTEZ <span class="footer-social-small">en</span> CONTACT
         </span>
         <span class="footer-social-overlap footer-social-icons-wrapper">
-        <a target="_blank" rel="noopener noreferrer" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
-        <a target="_blank" rel="noopener noreferrer" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-        <a target="_blank" rel="noopener noreferrer" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-        <a target="_blank" rel="noopener noreferrer" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-        <a target="_blank" rel="noopener noreferrer" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-        <a target="_blank" rel="noopener noreferrer" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+        <a target="_blank" rel="noopener noreferrer" title="Pinterest" itemprop="significantLink"><i class="icon-pinterest"/></a>
+        <a target="_blank" rel="noopener noreferrer" title="Facebook" itemprop="significantLink"><i class="icon-facebook"/></a>
+        <a target="_blank" rel="noopener noreferrer" title="Facebook" itemprop="significantLink"><i class="icon-instagram"/></a>
+        <a target="_blank" rel="noopener noreferrer" title="Youtube" itemprop="significantLink"><i class="icon-youtube"/></a>
+        <a target="_blank" rel="noopener noreferrer" title="Google Plus" itemprop="significantLink"><i class="icon-gplus"/></a>
         </span>
     </section>
     <section class="footer-bottom-section flex-rw">

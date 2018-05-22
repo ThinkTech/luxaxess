@@ -115,9 +115,11 @@ nav ul li > span {
   position: relative;
   top: 0.5em;
   left: 0.08125em;
+  cursor: pointer;
 }
 nav ul li > ul {
   display: none;
+  font-weight: 100;
 }
 nav ul li:hover > ul {
   display: block;
@@ -198,6 +200,7 @@ nav ul li a:hover {
     position: absolute;
     width: 16em;
     left: 0;
+    box-shadow: 4px 7px 62px -5px rgba(29, 28, 29, 0.78);
   }
 }
 @media (min-width: 1024px) {

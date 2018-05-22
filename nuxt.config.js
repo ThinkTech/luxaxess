@@ -71,11 +71,7 @@ export default {
   //'@/assets/css/bootstrap-reboot.min.css',
   //'@/assets/css/bootstrap-grid.min.css',
   //  '@/assets/css/bootstrap.min.css',
-  css: [
-    '@/assets/css/global.css',
-    '@/assets/css/font-awesome.css',
-    '@/assets/css/carousel.css'
-  ],
+  css: ['@/assets/css/global.css', '@/assets/css/carousel.css'],
   /*
    ** Customize the progress bar color
    */
